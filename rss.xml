@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AliXD</title><description>My name is Ali Lotfi, a curious mind with a passion for learning and creating. I’ve always believed that creativity has no boundaries, whether it’s in art, design, or technology. Outside of my work, I enjoy exploring new ideas, solving challenges, and sharing what I learn with others. This blog is my personal space to express my thoughts, experiences, and the little stories that make life interesting.</description><link>https://blog.imalixd.ir</link><item><title>Blog Features Overview</title><link>https://blog.imalixd.ir/posts/showing-off-blog-features</link><guid isPermaLink="true">https://blog.imalixd.ir/posts/showing-off-blog-features</guid><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I wanted to make a post showing the features available on my blog, so you can see what’s possible when reading or writing here.&lt;/p&gt;
+&lt;h2&gt;Theming&lt;/h2&gt;
+&lt;p&gt;The blog supports different visual themes. You can use light mode, dark mode, or other color styles, and your choice will be remembered when you visit again.&lt;/p&gt;
+&lt;h2&gt;Basic Formatting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet lists&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bold text&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Italic text&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;Strikethrough text&lt;/s&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.example.com&quot;&gt;Clickable links&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quotes&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Some endings are bittersweet. Timing is everything.” – Gossip Girl&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;City&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;New York&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;Los Angeles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Charlie&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;Chicago&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Images&lt;/h2&gt;
+&lt;p&gt;You can add images with captions:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree&quot; title=&quot;Pixel art example&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Or show pixelated graphics in their original style:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree #pixelated&quot; title=&quot;Pixel art with correct scaling&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Notes and Highlights&lt;/h2&gt;
+&lt;p&gt;:::note
+This is a note for readers.
+:::&lt;/p&gt;
+&lt;p&gt;:::tip
+This is a helpful tip.
+:::&lt;/p&gt;
+&lt;p&gt;:::warning
+This is a warning.
+:::&lt;/p&gt;
+&lt;h2&gt;Emojis&lt;/h2&gt;
+&lt;p&gt;You can add emojis like :coffee: ☕ or :star_struck: 🤩 to make your posts more expressive.&lt;/p&gt;
+&lt;h2&gt;Math Support&lt;/h2&gt;
+&lt;p&gt;Inline math and formulas are supported, for example:&lt;br /&gt;
+$ \frac{a}{b} \cdot b = a $&lt;/p&gt;
+&lt;h2&gt;HTML Elements&lt;/h2&gt;
+&lt;p&gt;Posts can include interactive HTML elements like buttons, forms, and more.&lt;/p&gt;
+&lt;p&gt;&amp;lt;button&amp;gt;Click Me&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;That’s a quick look at what’s possible here. I’ll use these features in future posts to make them more engaging and fun.&lt;/p&gt;
+</content:encoded><author>Ali Lotfi</author></item></channel></rss>
