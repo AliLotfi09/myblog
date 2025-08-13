@@ -1,0 +1,107 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { getSortedPosts } from '@utils'
+import { getCollection, render } from 'astro:content'
+import PostPreview from '@components/PostPreview.astro'
+import Pagination from '@components/Pagination.astro'
+import BlockHeader from '@components/BlockHeader.astro'
+import HomeBanner from '@components/HomeBanner.astro'
+import siteConfig from '../site.config'
+import TagsSection from '@components/TagsSection.astro'
+
+const home = await getCollection('home')
+let HomeContent
+let homeAvatarImage
+let homeGithubCalendar
+if (home.length > 0) {
+  const homeEntry = home[0]
+  const { Content } = await render(homeEntry)
+  HomeContent = Content
+  homeAvatarImage = homeEntry.data.avatarImage
+  homeGithubCalendar = homeEntry.data.githubCalendar
+}
+const sortedPosts = await getSortedPosts()
+const postsHaveTags = sortedPosts.some(
+  (post) => post.data.tags && post.data.tags.length > 0,
+)
+---
+
+<Layout>
+  {
+    HomeContent && (
+      <HomeBanner avatarImage={homeAvatarImage} githubCalendar={homeGithubCalendar}>
+        <HomeContent />
+      </HomeBanner>
+    )
+  }
+
+
+
+  {
+    postsHaveTags && (
+      <>
+        <BlockHeader>Tags</BlockHeader>
+        <TagsSection posts={sortedPosts} />
+      </>
+    )
+  }
+<a href="imalixd.ir">
+  <section class="blur-box">
+  <img src="/src/content/desk.png" alt="Background Image" class="bg-image" />
+  <div class="overlay">
+    <h2>3D & Desktop website</h2>
+  </div>
+  </section>
+</a>
+  {
+    sortedPosts.length > 0 && (
+      <>
+        <BlockHeader>Latest Posts</BlockHeader>
+        {sortedPosts.slice(0, siteConfig.pageSize).map((post) => (
+          <PostPreview post={post} />
+        ))}
+        <Pagination nextLink="/posts" nextText="Archive" />
+      </>
+    )
+  }
+</Layout>
+
+
+<style is:global>
+  a.heading-anchor {
+    display: none !important;
+  }
+  .blur-box {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* اندازه باکس */
+  margin: 2rem auto; /* وسط چین کردن */
+  border-radius: 16px; /* گوشه‌های گرد */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.bg-image {
+  width: 100%;
+  display: block; 
+  object-fit: cover;
+  height: 400px; /* ارتفاع دلخواه */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* تار کردن تصویر زیر */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3); /* لایه نیمه شفاف */
+}
+</style>
