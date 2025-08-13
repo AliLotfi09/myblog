@@ -27,6 +27,7 @@ import rehypePixelated from './src/plugins/rehype-pixelated' /* Custom plugin to
 
 // https://astro.build/config
 export default defineConfig({
+  base: "/",
   site: siteConfig.site,
   trailingSlash: 'never',
   prefetch: true,

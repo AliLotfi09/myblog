@@ -1,4 +1,4 @@
-import siteConfig from '../../site.config'
+import siteConfig from '../../src/site.config'
 import { Resvg } from '@resvg/resvg-js'
 import type { APIContext, InferGetStaticPropsType } from 'astro'
 import satori, { type SatoriOptions } from 'satori'
