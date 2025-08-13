@@ -140,7 +140,6 @@ const config = {
     github: "https://github.com/stelcodes/AliLotfi09",
     mastodon: "@lotfali@matodon.social",
     email: "me.alidev@gmail.com",
-    telegram: "t.me/ImAliDes",
     rss: false
     // Set to true to include an RSS feed link in the footer
   },
