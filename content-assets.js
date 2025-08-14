@@ -1,4 +1,4 @@
-const __ASTRO_IMAGE_IMPORT_Z1Glz99 = new Proxy({"src":"/avatar.jpg","width":1280,"height":1280,"format":"jpg"}, {
+const __ASTRO_IMAGE_IMPORT_Z2jk40O = new Proxy({"src":"/avatar.jpg","width":1280,"height":1280,"format":"jpg"}, {
 						get(target, name, receiver) {
 							if (name === 'clone') {
 								return structuredClone(target);
@@ -37,6 +37,6 @@ const __ASTRO_IMAGE_IMPORT_1W6MYL = new Proxy({"src":"/cover.jpg","width":640,"h
 						}
 					});
 
-const contentAssets = new Map([["avatar.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fhome.md", __ASTRO_IMAGE_IMPORT_Z1Glz99], ["PixelatedGreenTreeSide.png?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fshowing-off-blog-features%2Findex.md", __ASTRO_IMAGE_IMPORT_Z190lSx], ["./cover.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fshowing-off-blog-features%2Findex.md", __ASTRO_IMAGE_IMPORT_1W6MYL], ["./avatar.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Faddendum.md", __ASTRO_IMAGE_IMPORT_Z1Glz99]]);
+const contentAssets = new Map([["./avatar.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Faddendum.md", __ASTRO_IMAGE_IMPORT_Z2jk40O], ["PixelatedGreenTreeSide.png?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fshowing-off-blog-features%2Findex.md", __ASTRO_IMAGE_IMPORT_Z190lSx], ["./cover.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fshowing-off-blog-features%2Findex.md", __ASTRO_IMAGE_IMPORT_1W6MYL], ["avatar.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fhome.md", __ASTRO_IMAGE_IMPORT_Z2jk40O]]);
 
 export { contentAssets as default };
