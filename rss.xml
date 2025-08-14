@@ -42,9 +42,9 @@
 &lt;/table&gt;
 &lt;h2&gt;Images&lt;/h2&gt;
 &lt;p&gt;You can add images with captions:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree&quot; title=&quot;Pixel art example&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree&quot; title=&quot;Pixel art example&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Or show pixelated graphics in their original style:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree #pixelated&quot; title=&quot;Pixel art with correct scaling&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;PixelatedGreenTreeSide.png&quot; alt=&quot;Pixel art of a tree #pixelated&quot; title=&quot;Pixel art with correct scaling&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Notes and Highlights&lt;/h2&gt;
 &lt;p&gt;:::note
 This is a note for readers.
