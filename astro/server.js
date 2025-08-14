@@ -210,12 +210,6 @@ const AstroGlobNoMatch = {
   message: (globStr) => `\`Astro.glob(${globStr})\` did not return any matching files.`,
   hint: "Check the pattern for typos."
 };
-const MissingSharp = {
-  name: "MissingSharp",
-  title: "Could not find Sharp.",
-  message: "Could not find Sharp. Please install Sharp (`sharp`) manually into your project or migrate to another image service.",
-  hint: "See Sharp's installation instructions for more information: https://sharp.pixelplumbing.com/install. If you are not relying on `astro:assets` to optimize, transform, or process any images, you can configure a passthrough image service instead of installing Sharp. See https://docs.astro.build/en/reference/errors/missing-sharp for more information.\n\nSee https://docs.astro.build/en/guides/images/#default-image-service for more information on how to migrate to another image service."
-};
 const ExperimentalFontsNotEnabled = {
   name: "ExperimentalFontsNotEnabled",
   title: "Experimental fonts are not enabled",
@@ -2344,4 +2338,4 @@ function createVNode(type, props) {
   return vnode;
 }
 
-export { AstroError as A, ExpectedNotESMImage as B, InvalidImageService as C, ImageMissingAlt as D, ExpectedImage as E, Fragment as F, ExperimentalFontsNotEnabled as G, FontFamilyNotFound as H, IncompatibleDescriptorOptions as I, MissingSharp as J, LocalImageUsedWrongly as L, MissingImageDimension as M, NOOP_MIDDLEWARE_HEADER as N, RenderUndefinedEntryError as R, UnknownContentCollectionError as U, renderTemplate as a, createAstro as b, createComponent as c, renderSlot as d, addAttribute as e, renderScript as f, defineStyleVars as g, renderHead as h, renderUniqueStylesheet as i, renderScriptElement as j, createHeadAndContent as k, renderJSX as l, maybeRenderHead as m, createVNode as n, AstroJSX as o, AstroUserError as p, decodeKey as q, renderComponent as r, spreadAttributes as s, UnsupportedImageFormat as t, unescapeHTML as u, UnsupportedImageConversion as v, toStyleString as w, NoImageMetadata as x, FailedToFetchRemoteImageDimensions as y, ExpectedImageOptions as z };
+export { AstroError as A, ExpectedNotESMImage as B, InvalidImageService as C, ImageMissingAlt as D, ExpectedImage as E, Fragment as F, ExperimentalFontsNotEnabled as G, FontFamilyNotFound as H, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NOOP_MIDDLEWARE_HEADER as N, RenderUndefinedEntryError as R, UnknownContentCollectionError as U, renderTemplate as a, createAstro as b, createComponent as c, renderSlot as d, addAttribute as e, renderScript as f, defineStyleVars as g, renderHead as h, renderUniqueStylesheet as i, renderScriptElement as j, createHeadAndContent as k, renderJSX as l, maybeRenderHead as m, createVNode as n, AstroJSX as o, AstroUserError as p, decodeKey as q, renderComponent as r, spreadAttributes as s, UnsupportedImageFormat as t, unescapeHTML as u, UnsupportedImageConversion as v, toStyleString as w, NoImageMetadata as x, FailedToFetchRemoteImageDimensions as y, ExpectedImageOptions as z };

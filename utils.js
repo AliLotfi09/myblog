@@ -776,4 +776,4 @@ async function getSortedPosts() {
   return sortedPosts;
 }
 
-export { DEFAULT_OUTPUT_FORMAT as D, VALID_SUPPORTED_FORMATS as V, renderEntry as a, getSortedPosts as b, config as c, dateString as d, DEFAULT_HASH_PROPS as e, getCollection as g, pick as p, resolveThemeColorStyles as r };
+export { DEFAULT_HASH_PROPS as D, VALID_SUPPORTED_FORMATS as V, renderEntry as a, getSortedPosts as b, config as c, dateString as d, DEFAULT_OUTPUT_FORMAT as e, getCollection as g, pick as p, resolveThemeColorStyles as r };
