@@ -2242,6 +2242,15 @@ function renderUniqueStylesheet(result, sheet) {
 "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_".split("").reduce((v, c) => (v[c.charCodeAt(0)] = c, v), []);
 "-0123456789_".split("").reduce((v, c) => (v[c.charCodeAt(0)] = c, v), []);
 
+function __astro_tag_component__(Component, rendererName) {
+  if (!Component) return;
+  if (typeof Component !== "function") return;
+  Object.defineProperty(Component, Renderer, {
+    value: rendererName,
+    enumerable: false,
+    writable: false
+  });
+}
 function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   let output = "";
   if (scopedClassName) {
@@ -2338,4 +2347,4 @@ function createVNode(type, props) {
   return vnode;
 }
 
-export { AstroError as A, ExpectedNotESMImage as B, InvalidImageService as C, ImageMissingAlt as D, ExpectedImage as E, Fragment as F, ExperimentalFontsNotEnabled as G, FontFamilyNotFound as H, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NOOP_MIDDLEWARE_HEADER as N, RenderUndefinedEntryError as R, UnknownContentCollectionError as U, renderTemplate as a, createAstro as b, createComponent as c, renderSlot as d, addAttribute as e, renderScript as f, defineStyleVars as g, renderHead as h, renderUniqueStylesheet as i, renderScriptElement as j, createHeadAndContent as k, renderJSX as l, maybeRenderHead as m, createVNode as n, AstroJSX as o, AstroUserError as p, decodeKey as q, renderComponent as r, spreadAttributes as s, UnsupportedImageFormat as t, unescapeHTML as u, UnsupportedImageConversion as v, toStyleString as w, NoImageMetadata as x, FailedToFetchRemoteImageDimensions as y, ExpectedImageOptions as z };
+export { AstroError as A, ExpectedNotESMImage as B, InvalidImageService as C, ImageMissingAlt as D, ExpectedImage as E, Fragment as F, ExperimentalFontsNotEnabled as G, FontFamilyNotFound as H, IncompatibleDescriptorOptions as I, LocalImageUsedWrongly as L, MissingImageDimension as M, NOOP_MIDDLEWARE_HEADER as N, RenderUndefinedEntryError as R, UnknownContentCollectionError as U, __astro_tag_component__ as _, renderTemplate as a, createAstro as b, createComponent as c, renderSlot as d, addAttribute as e, renderScript as f, defineStyleVars as g, renderHead as h, renderUniqueStylesheet as i, renderScriptElement as j, createHeadAndContent as k, renderJSX as l, maybeRenderHead as m, createVNode as n, AstroJSX as o, AstroUserError as p, decodeKey as q, renderComponent as r, spreadAttributes as s, UnsupportedImageFormat as t, unescapeHTML as u, UnsupportedImageConversion as v, toStyleString as w, NoImageMetadata as x, FailedToFetchRemoteImageDimensions as y, ExpectedImageOptions as z };
