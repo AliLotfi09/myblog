@@ -39,11 +39,11 @@ The blog supports different visual themes. You can use light mode, dark mode, or
 
 You can add images with captions:
 
-![Pixel art of a tree](./PixelatedGreenTreeSide.png 'Pixel art example')
+![Pixel art of a tree](PixelatedGreenTreeSide.png 'Pixel art example')
 
 Or show pixelated graphics in their original style:
 
-![Pixel art of a tree #pixelated](./PixelatedGreenTreeSide.png 'Pixel art with correct scaling')
+![Pixel art of a tree #pixelated](PixelatedGreenTreeSide.png 'Pixel art with correct scaling')
 
 ## Notes and Highlights
 

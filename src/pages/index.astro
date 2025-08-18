@@ -35,8 +35,6 @@ const postsHaveTags = sortedPosts.some(
     )
   }
 
-
-
   {
     postsHaveTags && (
       <>
@@ -45,14 +43,14 @@ const postsHaveTags = sortedPosts.some(
       </>
     )
   }
-<a href="imalixd.ir">
-  <section class="blur-box">
-  <img src="/src/content/desk.png" alt="Background Image" class="bg-image" />
-  <div class="overlay">
-    <h2>3D & Desktop website</h2>
-  </div>
-  </section>
-</a>
+  <a href="https://imalixd.ir">
+    <section class="blur-box">
+      <img src="desk.png" alt="Background Image" class="bg-image" />
+      <div class="overlay">
+        <h2>3D & Desktop website</h2>
+      </div>
+    </section>
+  </a>
   {
     sortedPosts.length > 0 && (
       <>
@@ -66,42 +64,44 @@ const postsHaveTags = sortedPosts.some(
   }
 </Layout>
 
-
 <style is:global>
+  * {
+    scroll-behavior: smooth;
+  }
   a.heading-anchor {
     display: none !important;
   }
   .blur-box {
-  position: relative;
-  width: 100%;
-  max-width: 800px; /* اندازه باکس */
-  margin: 2rem auto; /* وسط چین کردن */
-  border-radius: 16px; /* گوشه‌های گرد */
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* اندازه باکس */
+    margin: 2rem auto; /* وسط چین کردن */
+    border-radius: 16px; /* گوشه‌های گرد */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
 
-.bg-image {
-  width: 100%;
-  display: block; 
-  object-fit: cover;
-  height: 400px; /* ارتفاع دلخواه */
-}
+  .bg-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 400px; /* ارتفاع دلخواه */
+  }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px); /* تار کردن تصویر زیر */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgba(0,0,0,0.3); /* لایه نیمه شفاف */
-}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* تار کردن تصویر زیر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3); /* لایه نیمه شفاف */
+  }
 </style>

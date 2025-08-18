@@ -61,6 +61,16 @@ const selectTheme =
   </nav>
 </header>
 
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(var(--color-background-rgb), 0.9);
+    backdrop-filter: blur(10px);
+  }
+</style>
+
 <script>
   const navMobileButton = document.getElementById('nav-mobile-button')
   const navMobileList = document.getElementById('nav-mobile-list')

@@ -27,10 +27,14 @@ import rehypePixelated from './src/plugins/rehype-pixelated' /* Custom plugin to
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/",
   site: siteConfig.site,
   trailingSlash: 'never',
   prefetch: true,
+   image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
+  },
   markdown: {
     remarkPlugins: [
       [remarkDescription, { maxChars: 200 }],
@@ -70,6 +74,15 @@ export default defineConfig({
     ],
   },
   vite: {
+    build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `[name].js`,
+        chunkFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`
+      }
+    }
+  },
     plugins: [tailwindcss()],
   },
   integrations: [

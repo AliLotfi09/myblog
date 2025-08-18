@@ -134,6 +134,7 @@ let generatedCss: string = cssLines.join('\n')
     <link rel="canonical" href={pageUrl} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -145,6 +146,7 @@ let generatedCss: string = cssLines.join('\n')
     <style is:inline set:html={generatedCss}></style>
     {themeMode === 'light-dark-auto' && <LightDarkAutoThemeLoader />}
     {themeMode === 'select' && <SelectThemeLoader />}
+    <meta name="google-site-verification" content="a5Bdh50bfgRup5t45jfjPXAGv1Qd0F-8k_NYpy6Z_Mo" />
   </head>
   <body class="w-full h-full m-0 bg-background text-foreground">
     <div
@@ -156,5 +158,10 @@ let generatedCss: string = cssLines.join('\n')
       </main>
       <Footer />
     </div>
+    <style>
+  :global(:root) {
+    scroll-behavior: smooth;
+  }
+  </style>
   </body>
 </html>
