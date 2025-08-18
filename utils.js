@@ -30,7 +30,10 @@ const config = {
     "Ali Lotfi WordPress",
     "Ali Lotfi Photoshop",
     "Ali Lotfi Figma",
-    "Ali Lotfi Iran"
+    "Ali Lotfi Iran",
+    "وبلاگ علی لطفی",
+    "علی لطفی",
+    "رزومه علی لطفی"
   ],
   // Font imported from @fontsource or elsewhere, used for the entire site.
   // To change this see src/styles/global.css and import a different font.
