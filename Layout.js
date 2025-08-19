@@ -6,7 +6,7 @@ import { getIconData, iconToSVG } from '@iconify/utils';
 import 'clsx';
 import crypto from 'crypto';
 
-const icons = {"local":{"prefix":"local","lastModified":1755624101,"icons":{"bluesky":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856\"/>"},"chevron-up":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m18 15-6-6-6 6\"/>"},"chevrons-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m11 17-5-5 5-5m7 10-5-5 5-5\"/>"},"chevrons-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m6 17 5-5-5-5m7 10 5-5-5-5\"/>"},"circle-x":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6m0-6 6 6\"/></g>"},"email":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\"/><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/></g>"},"github":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></g>"},"linkedin":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></g>"},"mastodon":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15.5 21.5C5 24 3 19 3 13v-3c0-6 2.5-7 7-7h4c4.5 0 7 1.5 7 5.5v4c0 6.5-10 4-13.5 4-1 0-1.5 7 8 5\"/><path d=\"M7 13.5V8s.5-2 2.5-2S12 8 12 8v2.5V8s.5-2 2.5-2S17 8 17 8v5.5\"/></g>"},"moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9\"/>"},"palette":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z\"/><circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></g>"},"rss":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1\"/></g>"},"search":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></g>"},"sun":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></g>"},"sun-moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2v2m1 4.129A4 4 0 0 1 15.873 11M19 5l-1.256 1.256M20 12h2M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7\"/>"},"telegram":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64},"twitter":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64}},"width":24,"height":24}};
+const icons = {"local":{"prefix":"local","lastModified":1755626749,"icons":{"bluesky":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856\"/>"},"chevron-up":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m18 15-6-6-6 6\"/>"},"chevrons-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m11 17-5-5 5-5m7 10-5-5 5-5\"/>"},"chevrons-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m6 17 5-5-5-5m7 10 5-5-5-5\"/>"},"circle-x":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6m0-6 6 6\"/></g>"},"email":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\"/><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/></g>"},"github":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></g>"},"linkedin":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></g>"},"mastodon":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15.5 21.5C5 24 3 19 3 13v-3c0-6 2.5-7 7-7h4c4.5 0 7 1.5 7 5.5v4c0 6.5-10 4-13.5 4-1 0-1.5 7 8 5\"/><path d=\"M7 13.5V8s.5-2 2.5-2S12 8 12 8v2.5V8s.5-2 2.5-2S17 8 17 8v5.5\"/></g>"},"moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9\"/>"},"palette":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z\"/><circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></g>"},"rss":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1\"/></g>"},"search":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></g>"},"sun":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></g>"},"sun-moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2v2m1 4.129A4 4 0 0 1 15.873 11M19 5l-1.256 1.256M20 12h2M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7\"/>"},"telegram":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64},"twitter":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64}},"width":24,"height":24}};
 
 const cache = /* @__PURE__ */ new WeakMap();
 
@@ -137,7 +137,90 @@ var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
 const $$TerminalLoader = createComponent(async ($$result, $$props, $$slots) => {
-  return renderTemplate(_a || (_a = __template(["", '<div id="terminal-loader" data-astro-cid-s2emjvvm> <div id="loader-container" data-astro-cid-s2emjvvm> <div id="screen" class="terminal_emulator" data-astro-cid-s2emjvvm></div> </div> <div id="welcome-screen" data-astro-cid-s2emjvvm>For best experience, please use desktop</div> </div> ', "  <script>\nconst Terminal = {\n  init(screen) {\n    this.screen = screen;\n    this.createInput();\n    return this;\n  },\n  \n  createInput() {\n    const field = document.createElement('div');\n    field.className = 'terminal_emulator__field';\n    this.screen.appendChild(field);\n    this.field = field;\n  },\n  \n  async type(text) {\n    return new Promise(resolve => {\n      let i = 0;\n      const speed = 90 + Math.random() * 50; // \u0633\u0631\u0639\u062A \u0637\u0628\u06CC\u0639\u06CC \u0648 \u0646\u0647 \u062E\u06CC\u0644\u06CC \u0633\u0631\u06CC\u0639\n      const typeChar = () => {\n        if (i < text.length) {\n          this.field.innerHTML = text.substring(0, i+1).replace(/ /g, '&nbsp;');\n          i++;\n          setTimeout(typeChar, speed);\n        } else {\n          resolve();\n        }\n      };\n      typeChar();\n    });\n  },\n  \n  async command(text) {\n    const cmd = document.createElement('div');\n    cmd.className = 'terminal_emulator__command';\n    cmd.innerHTML = text;\n    this.screen.insertBefore(cmd, this.field);\n    this.field.innerHTML = '';\n  },\n  \n  async response(text) {\n    const resp = document.createElement('div');\n    resp.className = 'terminal_emulator__response';\n    resp.innerHTML = text;\n    this.screen.appendChild(resp);\n  },\n  \n  async wait(ms) {\n    return new Promise(resolve => setTimeout(resolve, ms));\n  }\n};\n\nasync function runLoading() {\n  const terminal = Terminal.init(document.getElementById('screen'));\n  \n  await terminal.wait(500);\n  await terminal.type('Loading system...');\n  await terminal.command('Loading system...');\n  await terminal.response('Initializing components...');\n  await terminal.wait(1000);\n  await terminal.response('Checking dependencies...');\n  await terminal.wait(1200);\n  await terminal.response('Preparing environment...');\n  await terminal.wait(900);\n  await terminal.response('Finalizing setup...');\n  await terminal.wait(700);\n  await terminal.response('Ready!');\n  \n  const loader = document.getElementById('terminal-loader');\n  const welcome = document.getElementById('welcome-screen');\n  \n  welcome.classList.add('visible');\n  \n  await terminal.wait(2000);\n  \n  // fade-out \u06A9\u0644 \u0644\u0648\u062F\u06CC\u0646\u06AF\n  loader.style.transition = 'opacity 1s ease';\n  loader.style.opacity = 0;\n  \n  setTimeout(() => {\n    loader.remove(); // \u062D\u0630\u0641 \u06A9\u0627\u0645\u0644\n    document.body.style.overflow = 'auto';\n  }, 1000);\n}\n\ndocument.addEventListener('DOMContentLoaded', runLoading);\n<\/script>"])), maybeRenderHead(), renderSlot($$result, $$slots["default"]));
+  return renderTemplate(_a || (_a = __template(["", '<div id="terminal-loader" style="display:none;" data-astro-cid-s2emjvvm> <div id="loader-container" data-astro-cid-s2emjvvm> <div id="screen" class="terminal_emulator" data-astro-cid-s2emjvvm></div> </div> <div id="welcome-screen" data-astro-cid-s2emjvvm>For best experience, please use desktop</div> </div> ', `  <script>
+if (window.location.pathname === "/") {
+  document.getElementById("terminal-loader").style.display = "flex";
+
+  const Terminal = {
+    init(screen) {
+      this.screen = screen;
+      this.createInput();
+      return this;
+    },
+    createInput() {
+      const field = document.createElement('div');
+      field.className = 'terminal_emulator__field';
+      this.screen.appendChild(field);
+      this.field = field;
+    },
+    async type(text) {
+      return new Promise(resolve => {
+        let i = 0;
+        const speed = 90 + Math.random() * 50;
+        const typeChar = () => {
+          if (i < text.length) {
+            this.field.innerHTML = text.substring(0, i+1).replace(/ /g, '&nbsp;');
+            i++;
+            setTimeout(typeChar, speed);
+          } else {
+            resolve();
+          }
+        };
+        typeChar();
+      });
+    },
+    async command(text) {
+      const cmd = document.createElement('div');
+      cmd.className = 'terminal_emulator__command';
+      cmd.innerHTML = text;
+      this.screen.insertBefore(cmd, this.field);
+      this.field.innerHTML = '';
+    },
+    async response(text) {
+      const resp = document.createElement('div');
+      resp.className = 'terminal_emulator__response';
+      resp.innerHTML = text;
+      this.screen.appendChild(resp);
+    },
+    async wait(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+  };
+
+  async function runLoading() {
+    const terminal = Terminal.init(document.getElementById('screen'));
+    
+    await terminal.wait(500);
+    await terminal.type('Loading system...');
+    await terminal.command('Loading system...');
+    await terminal.response('Initializing components...');
+    await terminal.wait(1000);
+    await terminal.response('Checking dependencies...');
+    await terminal.wait(1200);
+    await terminal.response('Preparing environment...');
+    await terminal.wait(900);
+    await terminal.response('Finalizing setup...');
+    await terminal.wait(700);
+    await terminal.response('Ready!');
+    
+    const loader = document.getElementById('terminal-loader');
+    const welcome = document.getElementById('welcome-screen');
+    
+    welcome.classList.add('visible');
+    await terminal.wait(2000);
+    
+    loader.style.transition = 'opacity 1s ease';
+    loader.style.opacity = 0;
+    
+    setTimeout(() => {
+      loader.remove();
+      document.body.style.overflow = 'auto';
+    }, 1000);
+  }
+
+  document.addEventListener('DOMContentLoaded', runLoading);
+}
+<\/script>`])), maybeRenderHead(), renderSlot($$result, $$slots["default"]));
 }, "C:/Users/AliLotfi/Desktop/myblog/src/components/TerminalLoader.astro", void 0);
 
 const $$Astro = createAstro("https://blog.imalixd.ir");
