@@ -6,7 +6,7 @@ import { getIconData, iconToSVG } from '@iconify/utils';
 import 'clsx';
 import crypto from 'crypto';
 
-const icons = {"local":{"prefix":"local","lastModified":1755704191,"icons":{"bluesky":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856\"/>"},"chevron-up":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m18 15-6-6-6 6\"/>"},"chevrons-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m11 17-5-5 5-5m7 10-5-5 5-5\"/>"},"chevrons-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m6 17 5-5-5-5m7 10 5-5-5-5\"/>"},"circle-x":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6m0-6 6 6\"/></g>"},"email":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\"/><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/></g>"},"github":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></g>"},"linkedin":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></g>"},"mastodon":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15.5 21.5C5 24 3 19 3 13v-3c0-6 2.5-7 7-7h4c4.5 0 7 1.5 7 5.5v4c0 6.5-10 4-13.5 4-1 0-1.5 7 8 5\"/><path d=\"M7 13.5V8s.5-2 2.5-2S12 8 12 8v2.5V8s.5-2 2.5-2S17 8 17 8v5.5\"/></g>"},"moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9\"/>"},"palette":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z\"/><circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></g>"},"rss":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1\"/></g>"},"search":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></g>"},"sun":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></g>"},"sun-moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2v2m1 4.129A4 4 0 0 1 15.873 11M19 5l-1.256 1.256M20 12h2M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7\"/>"},"telegram":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64},"twitter":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64}},"width":24,"height":24}};
+const icons = {"local":{"prefix":"local","lastModified":1755774419,"icons":{"bluesky":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6.335 5.144C4.681 3.945 2 3.017 2 5.97c0 .59.35 4.953.556 5.661C3.269 14.094 5.686 14.381 8 14c-4.045.665-4.889 3.208-2.667 5.41C6.363 20.428 7.246 21 8 21c2 0 3.134-2.769 3.5-3.5q.5-1 .5-1.5 0 .5.5 1.5c.366.731 1.5 3.5 3.5 3.5.754 0 1.637-.571 2.667-1.59C20.889 17.207 20.045 14.664 16 14c2.314.38 4.73.094 5.444-2.369.206-.708.556-5.072.556-5.661 0-2.953-2.68-2.025-4.335-.826C15.372 6.806 12.905 10.192 12 12c-.905-1.808-3.372-5.194-5.665-6.856\"/>"},"chevron-up":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m18 15-6-6-6 6\"/>"},"chevrons-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m11 17-5-5 5-5m7 10-5-5 5-5\"/>"},"chevrons-right":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m6 17 5-5-5-5m7 10 5-5-5-5\"/>"},"circle-x":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6m0-6 6 6\"/></g>"},"email":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7\"/><rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/></g>"},"github":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></g>"},"linkedin":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></g>"},"mastodon":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M15.5 21.5C5 24 3 19 3 13v-3c0-6 2.5-7 7-7h4c4.5 0 7 1.5 7 5.5v4c0 6.5-10 4-13.5 4-1 0-1.5 7 8 5\"/><path d=\"M7 13.5V8s.5-2 2.5-2S12 8 12 8v2.5V8s.5-2 2.5-2S17 8 17 8v5.5\"/></g>"},"moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9\"/>"},"palette":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z\"/><circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\"/><circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></g>"},"rss":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16\"/><circle cx=\"5\" cy=\"19\" r=\"1\"/></g>"},"search":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></g>"},"sun":{"body":"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"/></g>"},"sun-moon":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 2v2m1 4.129A4 4 0 0 1 15.873 11M19 5l-1.256 1.256M20 12h2M9 8a5 5 0 1 0 7 7 7 7 0 1 1-7-7\"/>"},"telegram":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64},"twitter":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m26.67 38.57-.82 11.54A2.88 2.88 0 0 0 28.14 49l5.5-5.26 11.42 8.35c2.08 1.17 3.55.56 4.12-1.92l7.49-35.12h0c.66-3.09-1.08-4.33-3.16-3.55l-44 16.85C6.47 29.55 6.54 31.23 9 32l11.26 3.5 25.33-14.79c1.23-.83 2.36-.37 1.44.44Z\"/>","width":64,"height":64}},"width":24,"height":24}};
 
 const cache = /* @__PURE__ */ new WeakMap();
 
@@ -116,133 +116,21 @@ const $$Footer = createComponent(($$result, $$props, $$slots) => {
 </span> <span class="mx-5 hidden md:block"> :: </span> <span class="my-1"></span> </div> </footer>`;
 }, "C:/Users/AliLotfi/Desktop/myblog/src/components/Footer.astro", void 0);
 
-var __freeze$2 = Object.freeze;
-var __defProp$2 = Object.defineProperty;
-var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(cooked.slice()) }));
-var _a$2;
-createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate(_a$2 || (_a$2 = __template$2(["<script>\n  ;(function loadTheme() {\n    const pageDefaultTheme = document.documentElement.getAttribute('data-theme')\n    const pageDarkTheme = document.documentElement.getAttribute('data-dark-theme')\n    const pageLightTheme = document.documentElement.getAttribute('data-light-theme')\n    const pageThemeHash = document.documentElement.getAttribute('data-theme-hash')\n    if (!pageDefaultTheme || !pageDarkTheme || !pageLightTheme || !pageThemeHash) {\n      throw new Error('Theme attributes are required.')\n    }\n    const getStoredTheme = () => localStorage.getItem('data-theme')\n    let storedTheme = getStoredTheme()\n    const storedThemeHash = localStorage.getItem('data-theme-hash')\n    const themeHashMatches = storedThemeHash === pageThemeHash\n\n    if (!storedTheme || !storedThemeHash || !themeHashMatches) {\n      // Should be the first time loading the website\n      localStorage.setItem('data-theme', pageDefaultTheme)\n      localStorage.setItem('data-theme-hash', pageThemeHash)\n    }\n\n    if (\n      themeHashMatches &&\n      storedTheme &&\n      storedTheme !== 'auto' &&\n      storedTheme !== pageDefaultTheme\n    ) {\n      // The stored theme is different from the default theme, apply it\n      document.documentElement.setAttribute('data-theme', storedTheme)\n    } else if (pageDefaultTheme === 'auto' || storedTheme === 'auto') {\n      // If the default or stored theme is 'auto', apply the system preference\n      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')\n      document.documentElement.setAttribute(\n        'data-theme',\n        prefersDarkScheme.matches ? pageDarkTheme : pageLightTheme,\n      )\n      prefersDarkScheme.addEventListener('change', (e) => {\n        if (getStoredTheme() === 'auto') {\n          const newTheme = e.matches ? pageDarkTheme : pageLightTheme\n          document.documentElement.setAttribute('data-theme', newTheme)\n        }\n      })\n    }\n  })()\n<\/script>"])));
-}, "C:/Users/AliLotfi/Desktop/myblog/src/components/LightDarkAutoThemeLoader.astro", void 0);
-
 var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
 var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
 var _a$1;
-const $$SelectThemeLoader = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate(_a$1 || (_a$1 = __template$1(["<script>\n  ;(function loadTheme() {\n    const pageDefaultTheme = document.documentElement.getAttribute('data-theme')\n    const pageThemeHash = document.documentElement.getAttribute('data-theme-hash')\n    if (!pageDefaultTheme || !pageThemeHash) {\n      throw new Error('Theme attributes are required.')\n    }\n    const storedTheme = localStorage.getItem('data-theme')\n    const storedThemeHash = localStorage.getItem('data-theme-hash')\n    const themeHashMatches = storedThemeHash === pageThemeHash\n    if (!storedTheme || !storedThemeHash || !themeHashMatches) {\n      // Should be the first time loading the website\n      localStorage.setItem('data-theme', pageDefaultTheme)\n      localStorage.setItem('data-theme-hash', pageThemeHash)\n    }\n    if (themeHashMatches && storedTheme && storedTheme !== pageDefaultTheme) {\n      // The stored theme is different from the default theme, apply it\n      document.documentElement.setAttribute('data-theme', storedTheme)\n    }\n  })()\n<\/script>"])));
-}, "C:/Users/AliLotfi/Desktop/myblog/src/components/SelectThemeLoader.astro", void 0);
+createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate(_a$1 || (_a$1 = __template$1(["<script>\n  ;(function loadTheme() {\n    const pageDefaultTheme = document.documentElement.getAttribute('data-theme')\n    const pageDarkTheme = document.documentElement.getAttribute('data-dark-theme')\n    const pageLightTheme = document.documentElement.getAttribute('data-light-theme')\n    const pageThemeHash = document.documentElement.getAttribute('data-theme-hash')\n    if (!pageDefaultTheme || !pageDarkTheme || !pageLightTheme || !pageThemeHash) {\n      throw new Error('Theme attributes are required.')\n    }\n    const getStoredTheme = () => localStorage.getItem('data-theme')\n    let storedTheme = getStoredTheme()\n    const storedThemeHash = localStorage.getItem('data-theme-hash')\n    const themeHashMatches = storedThemeHash === pageThemeHash\n\n    if (!storedTheme || !storedThemeHash || !themeHashMatches) {\n      // Should be the first time loading the website\n      localStorage.setItem('data-theme', pageDefaultTheme)\n      localStorage.setItem('data-theme-hash', pageThemeHash)\n    }\n\n    if (\n      themeHashMatches &&\n      storedTheme &&\n      storedTheme !== 'auto' &&\n      storedTheme !== pageDefaultTheme\n    ) {\n      // The stored theme is different from the default theme, apply it\n      document.documentElement.setAttribute('data-theme', storedTheme)\n    } else if (pageDefaultTheme === 'auto' || storedTheme === 'auto') {\n      // If the default or stored theme is 'auto', apply the system preference\n      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')\n      document.documentElement.setAttribute(\n        'data-theme',\n        prefersDarkScheme.matches ? pageDarkTheme : pageLightTheme,\n      )\n      prefersDarkScheme.addEventListener('change', (e) => {\n        if (getStoredTheme() === 'auto') {\n          const newTheme = e.matches ? pageDarkTheme : pageLightTheme\n          document.documentElement.setAttribute('data-theme', newTheme)\n        }\n      })\n    }\n  })()\n<\/script>"])));
+}, "C:/Users/AliLotfi/Desktop/myblog/src/components/LightDarkAutoThemeLoader.astro", void 0);
 
 var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
-const $$TerminalLoader = createComponent(async ($$result, $$props, $$slots) => {
-  return renderTemplate(_a || (_a = __template([`<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-  const Terminal = {
-    screen: document.getElementById('screen'),
-    async command(text){
-      const cmd = document.createElement("div");
-      cmd.className = "terminal_emulator__command";
-      cmd.innerHTML = text;
-      this.screen.appendChild(cmd);
-    },
-    async response(text){
-      const resp = document.createElement("div");
-      resp.className = "terminal_emulator__response";
-      resp.innerHTML = text;
-      this.screen.appendChild(resp);
-    },
-    async wait(ms){ return new Promise(r=>setTimeout(r,ms)); },
-    async runLoadingSequence(){
-      const field = document.createElement("div");
-      field.className="terminal_emulator__field"; 
-      field.innerHTML="&nbsp;";
-      this.screen.appendChild(field);
-
-      await this.command("Loading system...");
-      await this.wait(800);
-      await this.response("Initializing components...");
-      await this.wait(800);
-      await this.response("Checking dependencies...");
-      await this.wait(800);
-      await this.response("Preparing environment...");
-      await this.wait(700);
-      await this.response("Finalizing setup...");
-      await this.wait(700);
-      await this.response("Ready!");
-      await this.wait(500);
-
-      // \u0645\u0648\u0628\u0627\u06CC\u0644: \u067E\u0631\u0633\u0634 \u0646\u0645\u0627\u06CC\u0634 \u062F\u0627\u062F\u0647 \u0646\u0634\u0648\u062F\u060C \u0645\u0633\u062A\u0642\u06CC\u0645 fade \u0628\u0647 \u0635\u0641\u062D\u0647 \u0627\u0635\u0644\u06CC
-      if(isMobile){
-        const loader = document.getElementById("terminal-loader");
-        const welcome = document.getElementById("welcome-screen");
-        setTimeout(()=>{
-          welcome.classList.add("visible");
-          setTimeout(()=>{
-            loader.style.opacity=0;
-            setTimeout(()=>{ loader.remove(); document.body.style.overflow="auto"; },1000);
-          },1500);
-        },1000);
-        return;
-      }
-
-      // \u062F\u0633\u06A9\u062A\u0627\u067E: \u0646\u0645\u0627\u06CC\u0634 \u067E\u0631\u0633\u0634
-      await this.askUser("Do you have a strong system? (yes/no) and then press enter");
-    },
-    async askUser(question){
-      await this.command(question);
-
-      const field = document.createElement("div");
-      field.className="terminal_emulator__field";
-      field.innerHTML="Type here: ";
-      field.style.setProperty("--chars","10ch");
-      this.screen.appendChild(field);
-
-      let input="";
-      const handleKey = (e)=>{
-        if(e.key.length===1 && !e.ctrlKey){ input+=e.key; field.innerHTML="Type here: "+input; field.style.setProperty("--chars",(10+input.length)+"ch"); }
-        else if(e.key==="Backspace"){ input=input.slice(0,-1); field.innerHTML="Type here: "+input; field.style.setProperty("--chars",(10+input.length)+"ch"); }
-        else if(e.key==="Enter"){
-          document.removeEventListener("keydown",handleKey);
-          field.classList.remove("terminal_emulator__field");
-          field.classList.add("terminal_emulator__command");
-
-          const ans = input.trim().toLowerCase();
-          if(ans==="y"||ans==="yes") this.response("Mode: spline (3D enabled)");
-          else this.response("Mode: avatar (light mode)");
-
-          this.response("We ask this to optimize performance for your device.");
-
-          const loader = document.getElementById("terminal-loader");
-          const welcome = document.getElementById("welcome-screen");
-          setTimeout(()=>{
-            welcome.classList.add("visible");
-            setTimeout(()=>{
-              loader.style.opacity=0;
-              setTimeout(()=>{ loader.remove(); document.body.style.overflow="auto"; },1000);
-            },1500);
-          },1000);
-        }
-      };
-      document.addEventListener("keydown",handleKey);
-
-      const hint = document.createElement("div");
-      hint.className="mobile-hint";
-      hint.innerText="On mobile, use your keyboard and press Enter";
-      this.screen.appendChild(hint);
-    }
-  };
-
-  const loader = document.getElementById("terminal-loader");
-  loader.style.display="flex";
-  const terminal = Terminal;
-  terminal.runLoadingSequence();
-});
-<\/script>`])));
-}, "C:/Users/AliLotfi/Desktop/myblog/src/components/TerminalLoader.astro", void 0);
+const $$SelectThemeLoader = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate(_a || (_a = __template(["<script>\n  ;(function loadTheme() {\n    const pageDefaultTheme = document.documentElement.getAttribute('data-theme')\n    const pageThemeHash = document.documentElement.getAttribute('data-theme-hash')\n    if (!pageDefaultTheme || !pageThemeHash) {\n      throw new Error('Theme attributes are required.')\n    }\n    const storedTheme = localStorage.getItem('data-theme')\n    const storedThemeHash = localStorage.getItem('data-theme-hash')\n    const themeHashMatches = storedThemeHash === pageThemeHash\n    if (!storedTheme || !storedThemeHash || !themeHashMatches) {\n      // Should be the first time loading the website\n      localStorage.setItem('data-theme', pageDefaultTheme)\n      localStorage.setItem('data-theme-hash', pageThemeHash)\n    }\n    if (themeHashMatches && storedTheme && storedTheme !== pageDefaultTheme) {\n      // The stored theme is different from the default theme, apply it\n      document.documentElement.setAttribute('data-theme', storedTheme)\n    }\n  })()\n<\/script>"])));
+}, "C:/Users/AliLotfi/Desktop/myblog/src/components/SelectThemeLoader.astro", void 0);
 
 const $$Astro = createAstro("https://blog.imalixd.ir");
 const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
@@ -255,18 +143,56 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const pageDescription = description || config.description;
   const pageAuthor = author || config.author;
   const pageImage = pageType === "article" ? Astro2.url.origin + Astro2.url.pathname.replace(/\/posts\//, "/social-cards/") + ".png" : `${Astro2.url.origin}/social-cards/__default.png`;
-  const pageKeywords = [...new Set(config.tags.concat(tags || []).map((w) => w.toLowerCase()))].join(", ");
-  const baseCssVars = { "theme-font": config.font };
+  const pageKeywords = [
+    ...new Set(config.tags.concat(tags || []).map((word) => word.toLowerCase()))
+  ].join(", ");
+  const baseCssVars = {
+    "theme-font": config.font,
+    "ec-frm-frameBoxShdCssVal": "none",
+    "ec-frm-edTabBrdRad": "0",
+    "ec-frm-edTabBarBrdCol": "color-mix(in srgb, var(--theme-foreground), 10%, transparent)",
+    "ec-brdCol": "color-mix(in srgb, var(--theme-foreground), 10%, transparent)"
+  };
   let themeMode = config.themes.mode;
+  if (config.themes.include.length < 1) {
+    throw new Error("No themes defined in site.config. Please add at least one theme.");
+  }
   let defaultTheme = config.themes.default;
   let includedThemes = config.themes.include;
+  const themeNotIncluded = !includedThemes.includes(defaultTheme);
+  if (themeNotIncluded || themeMode === "light-dark-auto") {
+    console.warn(
+      `Default theme "${defaultTheme}" not found in themes. Using first theme: "${config.themes.include[0]}".`
+    );
+    defaultTheme = config.themes.include[0];
+  }
   let lightTheme = void 0;
   let darkTheme = void 0;
   const themeHash = crypto.createHash("md5").update(themeMode + defaultTheme + includedThemes.join("")).digest("hex").slice(0, 8);
   const resolvedThemes = await resolveThemeColorStyles(config.themes.include);
   let cssLines = [];
   for (const [themeId, themeStyles] of Object.entries(resolvedThemes)) {
-    const relevantStyles = pick(themeStyles, ["foreground", "background", "accent", "h1", "h2", "h3", "h4", "h5", "h6", "li", "italic", "a", "hr"]);
+    const relevantStyles = pick(themeStyles, [
+      "foreground",
+      "background",
+      "accent",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "li",
+      "italic",
+      "a",
+      "hr",
+      "blue",
+      "green",
+      "red",
+      "yellow",
+      "magenta",
+      "cyan"
+    ]);
     cssLines.push(`:root[data-theme="${themeId}"] {`);
     for (const [key, value] of Object.entries(relevantStyles)) {
       cssLines.push(`--theme-${key}: ${value};`);
@@ -275,7 +201,7 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   }
   let generatedCss = cssLines.join("\n");
   const $$definedVars = defineStyleVars([baseCssVars]);
-  return renderTemplate`<html lang="en"${addAttribute(defaultTheme, "data-theme")}${addAttribute(darkTheme, "data-dark-theme")}${addAttribute(lightTheme, "data-light-theme")}${addAttribute(themeMode, "data-theme-mode")}${addAttribute(themeHash, "data-theme-hash")}${addAttribute($$definedVars, "style")}> <head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta name="generator"${addAttribute(Astro2.generator, "content")}><meta name="title"${addAttribute(pageTitle, "content")}><meta name="description"${addAttribute(pageDescription, "content")}><meta name="author"${addAttribute(pageAuthor, "content")}><meta property="og:title"${addAttribute(pageTitle, "content")}><meta property="og:description"${addAttribute(pageDescription, "content")}><meta property="og:url"${addAttribute(pageUrl, "content")}><meta property="og:type"${addAttribute(pageType, "content")}>${pageImage && renderTemplate`<meta property="og:image"${addAttribute(pageImage, "content")}>`}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title"${addAttribute(pageTitle, "content")}><meta name="twitter:description"${addAttribute(pageDescription, "content")}>${pageImage && renderTemplate`<meta name="twitter:image"${addAttribute(pageImage, "content")}>`}<meta name="keywords"${addAttribute(pageKeywords, "content")}><link rel="canonical"${addAttribute(pageUrl, "href")}><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml"${addAttribute(config.title, "title")}${addAttribute(new URL("rss.xml", Astro2.site), "href")}><title>${pageTitle}</title><style>${unescapeHTML(generatedCss)}</style>${themeMode === "light-dark-auto"}${renderTemplate`${renderComponent($$result, "SelectThemeLoader", $$SelectThemeLoader, {})}`}${renderHead()}</head> <body class="w-full h-full m-0 bg-background text-foreground"${addAttribute($$definedVars, "style")}> <div class="flex flex-col max-w-3xl min-h-screen border-accent/10 m-auto py-5 px-4 sm:px-6 md:px-8 md:py-10"${addAttribute($$definedVars, "style")}> <!-- محتوای شما --> ${renderComponent($$result, "TerminalLoader", $$TerminalLoader, {}, { "default": async ($$result2) => renderTemplate` ${renderComponent($$result2, "Header", $$Header, {})} <main class="flex flex-col"${addAttribute($$definedVars, "style")}> ${renderSlot($$result2, $$slots["default"])} </main> ${renderComponent($$result2, "Footer", $$Footer, {})} ` })} </div> </body></html>`;
+  return renderTemplate`<html lang="en"${addAttribute(defaultTheme, "data-theme")}${addAttribute(darkTheme, "data-dark-theme")}${addAttribute(lightTheme, "data-light-theme")}${addAttribute(themeMode, "data-theme-mode")}${addAttribute(themeHash, "data-theme-hash")} data-astro-cid-sckkx6r4${addAttribute($$definedVars, "style")}> <head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta name="generator"${addAttribute(Astro2.generator, "content")}><meta name="title"${addAttribute(pageTitle, "content")}><meta name="description"${addAttribute(pageDescription, "content")}><meta name="author"${addAttribute(pageAuthor, "content")}><meta property="og:title"${addAttribute(pageTitle, "content")}><meta property="og:description"${addAttribute(pageDescription, "content")}><meta property="og:url"${addAttribute(pageUrl, "content")}><meta property="og:type"${addAttribute(pageType, "content")}>${pageImage && renderTemplate`<meta property="og:image"${addAttribute(pageImage, "content")}>`}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title"${addAttribute(pageTitle, "content")}><meta name="twitter:description"${addAttribute(pageDescription, "content")}>${pageImage && renderTemplate`<meta name="twitter:image"${addAttribute(pageImage, "content")}>`}<meta name="keywords"${addAttribute(pageKeywords, "content")}><link rel="canonical"${addAttribute(pageUrl, "href")}><link rel="sitemap" href="/sitemap-index.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml"${addAttribute(config.title, "title")}${addAttribute(new URL("rss.xml", Astro2.site), "href")}><title>${pageTitle}</title><style>${unescapeHTML(generatedCss)}</style>${themeMode === "light-dark-auto"}${renderTemplate`${renderComponent($$result, "SelectThemeLoader", $$SelectThemeLoader, { "data-astro-cid-sckkx6r4": true })}`}<meta name="google-site-verification" content="a5Bdh50bfgRup5t45jfjPXAGv1Qd0F-8k_NYpy6Z_Mo">${renderHead()}</head> <body class="w-full h-full m-0 bg-background text-foreground" data-astro-cid-sckkx6r4${addAttribute($$definedVars, "style")}> <div class="flex flex-col max-w-3xl min-h-screen border-accent/10 m-auto py-5 px-4 sm:px-6 md:px-8 md:py-10" data-astro-cid-sckkx6r4${addAttribute($$definedVars, "style")}> ${renderComponent($$result, "Header", $$Header, { "data-astro-cid-sckkx6r4": true })} <main class="flex flex-col" data-astro-cid-sckkx6r4${addAttribute($$definedVars, "style")}> ${renderSlot($$result, $$slots["default"])} </main> ${renderComponent($$result, "Footer", $$Footer, { "data-astro-cid-sckkx6r4": true })} </div>  </body> </html>`;
 }, "C:/Users/AliLotfi/Desktop/myblog/src/layouts/Layout.astro", void 0);
 
 export { $$Layout as $, $$Icon as a };

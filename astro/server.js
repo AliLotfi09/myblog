@@ -266,7 +266,7 @@ function createComponent(arg1, moduleId, propagation) {
   }
 }
 
-const ASTRO_VERSION = "5.13.2";
+const ASTRO_VERSION = "5.11.1";
 const NOOP_MIDDLEWARE_HEADER = "X-Astro-Noop";
 
 function createAstroGlobFn() {
@@ -2335,12 +2335,12 @@ function transformSetDirectives(vnode) {
     return;
   }
 }
-function createVNode(type, props = {}, key) {
+function createVNode(type, props) {
   const vnode = {
     [Renderer]: "astro:jsx",
     [AstroJSX]: true,
     type,
-    props
+    props: props ?? {}
   };
   transformSetDirectives(vnode);
   transformSlots(vnode);

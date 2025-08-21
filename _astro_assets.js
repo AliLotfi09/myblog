@@ -1221,12 +1221,14 @@ async function getImage$1(options, imageConfig) {
   };
   let originalWidth;
   let originalHeight;
+  let originalFormat;
   if (options.inferSize && isRemoteImage(resolvedOptions.src) && isRemotePath(resolvedOptions.src)) {
     const result = await inferRemoteSize(resolvedOptions.src);
     resolvedOptions.width ??= result.width;
     resolvedOptions.height ??= result.height;
     originalWidth = result.width;
     originalHeight = result.height;
+    originalFormat = result.format;
     delete resolvedOptions.inferSize;
   }
   const originalFilePath = isESMImportedImage(resolvedOptions.src) ? resolvedOptions.src.fsPath : void 0;
@@ -1237,6 +1239,7 @@ async function getImage$1(options, imageConfig) {
   if (isESMImportedImage(clonedSrc)) {
     originalWidth = clonedSrc.width;
     originalHeight = clonedSrc.height;
+    originalFormat = clonedSrc.format;
   }
   if (originalWidth && originalHeight) {
     const aspectRatio = originalWidth / originalHeight;
@@ -1282,12 +1285,12 @@ async function getImage$1(options, imageConfig) {
   const validatedOptions = service.validateOptions ? await service.validateOptions(resolvedOptions, imageConfig) : resolvedOptions;
   const srcSetTransforms = service.getSrcSet ? await service.getSrcSet(validatedOptions, imageConfig) : [];
   let imageURL = await service.getURL(validatedOptions, imageConfig);
-  const matchesValidatedTransform = (transform) => transform.width === validatedOptions.width && transform.height === validatedOptions.height && transform.format === validatedOptions.format;
+  const matchesOriginal = (transform) => transform.width === originalWidth && transform.height === originalHeight && transform.format === originalFormat;
   let srcSets = await Promise.all(
     srcSetTransforms.map(async (srcSet) => {
       return {
         transform: srcSet.transform,
-        url: matchesValidatedTransform(srcSet.transform) ? imageURL : await service.getURL(srcSet.transform, imageConfig),
+        url: matchesOriginal(srcSet.transform) ? imageURL : await service.getURL(srcSet.transform, imageConfig),
         descriptor: srcSet.descriptor,
         attributes: srcSet.attributes
       };
@@ -1303,7 +1306,7 @@ async function getImage$1(options, imageConfig) {
     srcSets = srcSetTransforms.map((srcSet) => {
       return {
         transform: srcSet.transform,
-        url: matchesValidatedTransform(srcSet.transform) ? imageURL : globalThis.astroAsset.addStaticImage(srcSet.transform, propsToHash, originalFilePath),
+        url: matchesOriginal(srcSet.transform) ? imageURL : globalThis.astroAsset.addStaticImage(srcSet.transform, propsToHash, originalFilePath),
         descriptor: srcSet.descriptor,
         attributes: srcSet.attributes
       };
