@@ -1278,150 +1278,158 @@
     }
   })()
 </script><meta name="google-site-verification" content="a5Bdh50bfgRup5t45jfjPXAGv1Qd0F-8k_NYpy6Z_Mo"><link rel="stylesheet" href="/about.css">
-<style>html,body{margin:0;padding:0;height:100%;width:100%}#terminal-loader[data-astro-cid-s2emjvvm]{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#1e1e1e;z-index:9999;display:flex;justify-content:flex-start;align-items:flex-end;padding:20px;box-sizing:border-box;opacity:1;transition:opacity 1s ease}#loader-container[data-astro-cid-s2emjvvm]{max-width:600px;color:#9f9}#welcome-screen[data-astro-cid-s2emjvvm]{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;font-size:2rem;color:#fff;opacity:0;pointer-events:none;transition:opacity 1s ease;background-color:#181111}#welcome-screen[data-astro-cid-s2emjvvm].visible{opacity:1;pointer-events:auto}.terminal_emulator__field[data-astro-cid-s2emjvvm],.terminal_emulator__command[data-astro-cid-s2emjvvm]{position:relative;padding-left:1.5em;margin-bottom:9px;color:#9f9}.terminal_emulator__field[data-astro-cid-s2emjvvm]:before,.terminal_emulator__command[data-astro-cid-s2emjvvm]:before{position:absolute;left:0;content:">";color:#9f9}.terminal_emulator__response[data-astro-cid-s2emjvvm]{color:#fff;margin-bottom:9px}.terminal_emulator__field[data-astro-cid-s2emjvvm]{display:inline-block;min-width:1em;position:relative}.terminal_emulator__field[data-astro-cid-s2emjvvm]:after{content:"";position:absolute;left:calc(1.5em + var(--chars, 0ch));bottom:.1em;width:1em;height:1.5em;background:#9f9;animation:caretBlink 1s step-start infinite}@keyframes caretBlink{0%,50%{opacity:1}51%,to{opacity:0}}body{margin:0;padding:0;overflow:hidden}.spline-wrapper[data-astro-cid-fh5e5akq]{position:relative;width:100vw;height:100vh;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden}.fullwidth-spline[data-astro-cid-fh5e5akq]{width:100%;height:100%;display:block;margin:0;padding:0}.fade-top[data-astro-cid-fh5e5akq]{position:absolute;top:0;left:0;width:100%;height:150px;background:linear-gradient(to bottom,var(--color-background) 0%,transparent 100%);z-index:2;pointer-events:none}.fade-bottom[data-astro-cid-fh5e5akq]{position:absolute;bottom:0;left:0;width:100%;height:150px;background:linear-gradient(to bottom,transparent 0%,var(--color-background) 100%);z-index:2;pointer-events:none}
+<style>html,body{margin:0;padding:0;height:100%;width:100%}body>[data-astro-cid-s2emjvvm]:not(#terminal-loader){display:none}#terminal-loader[data-astro-cid-s2emjvvm]{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#1e1e1e;z-index:9999;display:flex;justify-content:flex-start;align-items:flex-end;padding:20px;box-sizing:border-box;opacity:1;transition:opacity 1s ease}#loader-container[data-astro-cid-s2emjvvm]{max-width:600px;color:#9f9}#welcome-screen[data-astro-cid-s2emjvvm]{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;font-size:2rem;color:#fff;opacity:0;pointer-events:none;transition:opacity 1s ease;background-color:#181111}#welcome-screen[data-astro-cid-s2emjvvm].visible{opacity:1;pointer-events:auto}.terminal_emulator__field[data-astro-cid-s2emjvvm],.terminal_emulator__command[data-astro-cid-s2emjvvm]{position:relative;padding-left:1.5em;margin-bottom:9px;color:#9f9}.terminal_emulator__field[data-astro-cid-s2emjvvm]:before,.terminal_emulator__command[data-astro-cid-s2emjvvm]:before{position:absolute;left:0;content:">";color:#9f9}.terminal_emulator__response[data-astro-cid-s2emjvvm]{color:#fff;margin-bottom:9px}.terminal_emulator__field[data-astro-cid-s2emjvvm]{display:inline-block;min-width:1em;position:relative}.terminal_emulator__field[data-astro-cid-s2emjvvm]:after{content:"";position:absolute;left:calc(1.5em + var(--chars, 0ch));bottom:.1em;width:1em;height:1.5em;background:#9f9;animation:caretBlink 1s step-start infinite}@keyframes caretBlink{0%,50%{opacity:1}51%,to{opacity:0}}body{margin:0;padding:0;overflow:hidden}.spline-wrapper[data-astro-cid-fh5e5akq]{position:relative;width:100vw;height:100vh;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden}.fullwidth-spline[data-astro-cid-fh5e5akq]{width:100%;height:100%;display:block;margin:0;padding:0}.fade-top[data-astro-cid-fh5e5akq]{position:absolute;top:0;left:0;width:100%;height:150px;background:linear-gradient(to bottom,var(--color-background) 0%,transparent 100%);z-index:2;pointer-events:none}.fade-bottom[data-astro-cid-fh5e5akq]{position:absolute;bottom:0;left:0;width:100%;height:150px;background:linear-gradient(to bottom,transparent 0%,var(--color-background) 100%);z-index:2;pointer-events:none}
 </style><script type="module" src="/page.js"></script></head> <body class="w-full h-full m-0 bg-background text-foreground" data-astro-cid-sckkx6r4 style="--theme-font: JetBrains Mono Variable;--ec-frm-frameBoxShdCssVal: none;--ec-frm-edTabBrdRad: 0;--ec-frm-edTabBarBrdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);--ec-brdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);"> <div class="flex flex-col max-w-3xl min-h-screen border-accent/10 m-auto py-5 px-4 sm:px-6 md:px-8 md:py-10" data-astro-cid-sckkx6r4 style="--theme-font: JetBrains Mono Variable;--ec-frm-frameBoxShdCssVal: none;--ec-frm-edTabBrdRad: 0;--ec-frm-edTabBarBrdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);--ec-brdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);"> <header data-astro-cid-3ef6ksr2> <div class="relative flex items-center justify-between bg-accent/10 rounded-xl" data-astro-cid-3ef6ksr2> <a id="logo" href="/" class="block px-4 py-1.5 max-w-full no-underline items-center bg-accent text-background font-bold rounded-xl" data-astro-cid-3ef6ksr2> AliXD </a> <div class="flex items-center gap-3 sm:mr-3" data-astro-cid-3ef6ksr2> <site-search class="ms-auto" id="search"> <button class="hover:text-accent flex cursor-pointer items-center justify-center rounded-md" aria-keyshortcuts="Control+K Meta+K" data-open-modal disabled> <svg width="1em" height="1em" class="size-6 text-accent" data-icon="search">   <symbol id="ai:local:search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></symbol><use href="#ai:local:search"></use>  </svg> <span class="sr-only">Open Search</span> </button> <dialog aria-label="search" class="text-foreground! bg-background max-h-5/6 min-h-48 w-7/8 sm:w-5/6 max-w-xl border-double! border-4 border-accent/30 shadow-sm backdrop:backdrop-blur-sm open:flex mx-auto mt-10 sm:mt-16 mb-auto rounded-xl"> <div class="dialog-frame flex grow flex-col gap-4 p-6 pt-6 max-w-full"> <button class="cursor-pointer fixed top-2 right-2 rounded-full" data-close-modal> <svg width="1em" height="1em" class="size-6 text-accent/50" data-icon="circle-x">   <symbol id="ai:local:circle-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6m0-6 6 6"/></g></symbol><use href="#ai:local:circle-x"></use>  </svg> </button> <div class="search-container"> <div id="pagefind-search" class="max-w-full"></div> </div> </div> </dialog> </site-search>  <script type="module" src="/Search.astro_astro_type_script_index_0_lang.js"></script>  <select-theme class="ms-auto" id="search" data-astro-cid-kbsdsqc5="true"> <button class="hover:text-accent flex cursor-pointer items-center justify-center rounded-md" aria-keyshortcuts="Control+K Meta+K" data-open-modal disabled data-astro-cid-kbsdsqc5> <svg width="1em" height="1em" class="size-6 text-accent" data-astro-cid-kbsdsqc5="true" data-icon="palette">   <symbol id="ai:local:palette" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></g></symbol><use href="#ai:local:palette"></use>  </svg> <span class="sr-only" data-astro-cid-kbsdsqc5>Select Theme</span> </button> <dialog aria-label="select-theme" class="text-foreground! bg-background max-h-5/6 max-w-5/6 border-double! border-4 border-accent/30 shadow-sm backdrop:backdrop-blur-sm open:flex mx-auto mt-16 mb-auto rounded-xl" data-astro-cid-kbsdsqc5> <div class="dialog-frame flex grow flex-col gap-4 px-10 py-1 max-w-full" data-astro-cid-kbsdsqc5> <button aria-roledescription="close" class="cursor-pointer fixed top-2 right-2 rounded-full" data-close-modal data-astro-cid-kbsdsqc5> <svg width="1em" height="1em" viewBox="0 0 24 24" class="size-6 text-accent/50" data-astro-cid-kbsdsqc5="true" data-icon="circle-x">   <use href="#ai:local:circle-x"></use>  </svg> </button> <ul id="theme-change-list" class="flex flex-col bg-background text-accent m-0 p-2 rounded-xl" data-astro-cid-kbsdsqc5> <li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="andromeeda" data-astro-cid-kbsdsqc5> Andromeeda </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="aurora-x" data-astro-cid-kbsdsqc5> Aurora X </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="ayu-dark" data-astro-cid-kbsdsqc5> Ayu Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="catppuccin-frappe" data-astro-cid-kbsdsqc5> Catppuccin Frappe </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="catppuccin-latte" data-astro-cid-kbsdsqc5> Catppuccin Latte </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="catppuccin-macchiato" data-astro-cid-kbsdsqc5> Catppuccin Macchiato </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="catppuccin-mocha" data-astro-cid-kbsdsqc5> Catppuccin Mocha </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="dark-plus" data-astro-cid-kbsdsqc5> Dark Plus </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="dracula" data-astro-cid-kbsdsqc5> Dracula </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="dracula-soft" data-astro-cid-kbsdsqc5> Dracula Soft </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="everforest-dark" data-astro-cid-kbsdsqc5> Everforest Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="everforest-light" data-astro-cid-kbsdsqc5> Everforest Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-dark" data-astro-cid-kbsdsqc5> Github Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-dark-default" data-astro-cid-kbsdsqc5> Github Dark Default </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-dark-dimmed" data-astro-cid-kbsdsqc5> Github Dark Dimmed </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-dark-high-contrast" data-astro-cid-kbsdsqc5> Github Dark High Contrast </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-light" data-astro-cid-kbsdsqc5> Github Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-light-default" data-astro-cid-kbsdsqc5> Github Light Default </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="github-light-high-contrast" data-astro-cid-kbsdsqc5> Github Light High Contrast </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-dark-hard" data-astro-cid-kbsdsqc5> Gruvbox Dark Hard </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-dark-medium" data-astro-cid-kbsdsqc5> Gruvbox Dark Medium </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-dark-soft" data-astro-cid-kbsdsqc5> Gruvbox Dark Soft </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-light-hard" data-astro-cid-kbsdsqc5> Gruvbox Light Hard </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-light-medium" data-astro-cid-kbsdsqc5> Gruvbox Light Medium </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="gruvbox-light-soft" data-astro-cid-kbsdsqc5> Gruvbox Light Soft </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="houston" data-astro-cid-kbsdsqc5> Houston </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="kanagawa-dragon" data-astro-cid-kbsdsqc5> Kanagawa Dragon </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="kanagawa-lotus" data-astro-cid-kbsdsqc5> Kanagawa Lotus </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="kanagawa-wave" data-astro-cid-kbsdsqc5> Kanagawa Wave </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="laserwave" data-astro-cid-kbsdsqc5> Laserwave </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="light-plus" data-astro-cid-kbsdsqc5> Light Plus </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="material-theme" data-astro-cid-kbsdsqc5> Material Theme </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="material-theme-darker" data-astro-cid-kbsdsqc5> Material Theme Darker </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="material-theme-lighter" data-astro-cid-kbsdsqc5> Material Theme Lighter </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="material-theme-ocean" data-astro-cid-kbsdsqc5> Material Theme Ocean </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="material-theme-palenight" data-astro-cid-kbsdsqc5> Material Theme Palenight </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="min-dark" data-astro-cid-kbsdsqc5> Min Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="min-light" data-astro-cid-kbsdsqc5> Min Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="monokai" data-astro-cid-kbsdsqc5> Monokai </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="night-owl" data-astro-cid-kbsdsqc5> Night Owl </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="nord" data-astro-cid-kbsdsqc5> Nord </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="one-dark-pro" data-astro-cid-kbsdsqc5> One Dark Pro </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="one-light" data-astro-cid-kbsdsqc5> One Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="plastic" data-astro-cid-kbsdsqc5> Plastic </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="poimandres" data-astro-cid-kbsdsqc5> Poimandres </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="red" data-astro-cid-kbsdsqc5> Red </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="rose-pine" data-astro-cid-kbsdsqc5> Rose Pine </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="rose-pine-dawn" data-astro-cid-kbsdsqc5> Rose Pine Dawn </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="rose-pine-moon" data-astro-cid-kbsdsqc5> Rose Pine Moon </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="slack-dark" data-astro-cid-kbsdsqc5> Slack Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="slack-ochin" data-astro-cid-kbsdsqc5> Slack Ochin </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="snazzy-light" data-astro-cid-kbsdsqc5> Snazzy Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="solarized-dark" data-astro-cid-kbsdsqc5> Solarized Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="solarized-light" data-astro-cid-kbsdsqc5> Solarized Light </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="synthwave-84" data-astro-cid-kbsdsqc5> Synthwave 84 </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="tokyo-night" data-astro-cid-kbsdsqc5> Tokyo Night </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="vesper" data-astro-cid-kbsdsqc5> Vesper </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="vitesse-black" data-astro-cid-kbsdsqc5> Vitesse Black </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="vitesse-dark" data-astro-cid-kbsdsqc5> Vitesse Dark </button> </li><li data-astro-cid-kbsdsqc5> <button class="w-full rounded-lg py-1 px-2" data-theme="vitesse-light" data-astro-cid-kbsdsqc5> Vitesse Light </button> </li> </ul> </div> </dialog> </select-theme>  <script type="module">class i extends HTMLElement{#n;#e;#i;#t;#o;constructor(){super(),this.#t=this.querySelector("button[data-open-modal]"),this.#n=this.querySelector("button[data-close-modal]"),this.#e=this.querySelector("dialog"),this.#i=this.querySelector(".dialog-frame"),this.#o=new AbortController,this.#t?(this.#t.addEventListener("click",this.openModal),this.#t.disabled=!1):console.warn("Select theme button not found"),this.#n?this.#n.addEventListener("click",this.closeModal):console.warn("Close button not found"),this.#e?this.#e.addEventListener("close",()=>{window.removeEventListener("click",this.onWindowClick)}):console.warn("Dialog not found"),this.querySelectorAll("#theme-change-list button")?.forEach(o=>{o.addEventListener("click",n=>{n.preventDefault();let t=o.getAttribute("data-theme");t&&(document.documentElement.setAttribute("data-theme",t),localStorage.setItem("data-theme",t),this.closeModal())})})}connectedCallback(){window.addEventListener("keydown",this.onWindowKeydown,{signal:this.#o.signal})}disconnectedCallback(){this.#o.abort()}openModal=e=>{if(!this.#e){console.warn("Dialog not found");return}this.highlightCurrentTheme(),document.querySelector("body")?.classList.add("overflow-hidden"),this.#e.showModal(),e?.stopPropagation(),window.addEventListener("click",this.onWindowClick,{signal:this.#o.signal})};closeModal=()=>{document.querySelector("body")?.classList.remove("overflow-hidden"),this.#e?.close()};onWindowClick=e=>{("href"in(e.target||{})||document.body.contains(e.target)&&!this.#i?.contains(e.target))&&this.closeModal()};onWindowKeydown=e=>{if(!this.#e){console.warn("Dialog not found");return}(e.metaKey===!0||e.ctrlKey===!0)&&e.key==="k"&&(this.#e.open?this.closeModal():this.openModal(),e.preventDefault())};highlightCurrentTheme(){const e=document.documentElement.getAttribute("data-theme");if(!e){console.warn("No theme set in data-theme attribute.");return}this.querySelectorAll("#theme-change-list li")?.forEach(n=>{let t=n.querySelector("button");if(!t){console.warn("No button found in theme change list item.");return}t.getAttribute("data-theme")===e?t.classList.add("current-theme"):t.classList.remove("current-theme")})}}customElements.define("select-theme",i);</script> <nav id="nav-mobile" aria-label="Menu" class="p-0 text-accent sm:hidden" data-astro-cid-3ef6ksr2> <button id="nav-mobile-button" class="px-3 py-1 h-full cursor-pointer border-2 rounded-xl bg-background" type="button" aria-expanded="false" aria-controls="nav-menu-list" data-astro-cid-3ef6ksr2>
 ▾
-</button> <ul id="nav-mobile-list" class="invisible absolute flex flex-col bg-background shadow text-accent border-2 m-0 p-2.5 top-11.5 left-auto right-0 z-50 rounded-xl" data-astro-cid-3ef6ksr2> <li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/"> Home </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/about"> About </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/posts"> Archive </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" rel="noopener noreferrer" target="_blank" href="https://github.com/Alilotfi09/"> GitHub </a> </li> </ul> </nav> </div> </div> <nav aria-label="Menu" class="p-0 mt-4 ml-0.5 text-accent hidden sm:block" data-astro-cid-3ef6ksr2> <ul class="flex flex-row text-accent mb-2.5" data-astro-cid-3ef6ksr2> <li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/"> Home </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/about"> About </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/posts"> Archive </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" rel="noopener noreferrer" target="_blank" href="https://github.com/Alilotfi09/"> GitHub </a> </li> </ul> </nav> </header>  <script type="module">const t=document.getElementById("nav-mobile-button"),n=document.getElementById("nav-mobile-list"),o=n?.querySelectorAll("li"),a=i=>{let e=!1;e=!n?.classList.toggle("invisible"),t?.setAttribute("aria-expanded",e?"true":"false"),o?.forEach(l=>{l.setAttribute("aria-expanded",e?"true":"false")})};t?.addEventListener("click",i=>{a()});</script> <main class="flex flex-col" data-astro-cid-sckkx6r4 style="--theme-font: JetBrains Mono Variable;--ec-frm-frameBoxShdCssVal: none;--ec-frm-edTabBrdRad: 0;--ec-frm-edTabBarBrdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);--ec-brdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);">   <div id="terminal-loader" style="display:none;" data-astro-cid-s2emjvvm> <div id="loader-container" data-astro-cid-s2emjvvm> <div id="screen" class="terminal_emulator" data-astro-cid-s2emjvvm></div> </div> <div id="welcome-screen" data-astro-cid-s2emjvvm>For best experience, please use desktop</div> </div>   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+</button> <ul id="nav-mobile-list" class="invisible absolute flex flex-col bg-background shadow text-accent border-2 m-0 p-2.5 top-11.5 left-auto right-0 z-50 rounded-xl" data-astro-cid-3ef6ksr2> <li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/"> Home </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/about"> About </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" href="/posts"> Archive </a> </li><li class="p-1" aria-expanded="false" data-astro-cid-3ef6ksr2> <a class="underline" rel="noopener noreferrer" target="_blank" href="https://github.com/Alilotfi09/"> GitHub </a> </li> </ul> </nav> </div> </div> <nav aria-label="Menu" class="p-0 mt-4 ml-0.5 text-accent hidden sm:block" data-astro-cid-3ef6ksr2> <ul class="flex flex-row text-accent mb-2.5" data-astro-cid-3ef6ksr2> <li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/"> Home </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/about"> About </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" href="/posts"> Archive </a> </li><li class="mr-5" aria-expanded="true" data-astro-cid-3ef6ksr2> <a class="underline" rel="noopener noreferrer" target="_blank" href="https://github.com/Alilotfi09/"> GitHub </a> </li> </ul> </nav> </header>  <script type="module">const t=document.getElementById("nav-mobile-button"),n=document.getElementById("nav-mobile-list"),o=n?.querySelectorAll("li"),a=i=>{let e=!1;e=!n?.classList.toggle("invisible"),t?.setAttribute("aria-expanded",e?"true":"false"),o?.forEach(l=>{l.setAttribute("aria-expanded",e?"true":"false")})};t?.addEventListener("click",i=>{a()});</script> <main class="flex flex-col" data-astro-cid-sckkx6r4 style="--theme-font: JetBrains Mono Variable;--ec-frm-frameBoxShdCssVal: none;--ec-frm-edTabBrdRad: 0;--ec-frm-edTabBarBrdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);--ec-brdCol: color-mix(in srgb, var(--theme-foreground), 10%, transparent);">   <!-- Loader باید اول body باشه --><div id="terminal-loader" style="display:flex;" data-astro-cid-s2emjvvm> <div id="loader-container" data-astro-cid-s2emjvvm> <div id="screen" class="terminal_emulator" data-astro-cid-s2emjvvm></div> </div> <div id="welcome-screen" data-astro-cid-s2emjvvm>For best experience, please use desktop</div> </div> <!-- محتوای اصلی -->   <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-    const Terminal = {
-      screen: document.getElementById('screen'),
-      async command(text) {
-        const cmd = document.createElement('div');
-        cmd.className = 'terminal_emulator__command';
-        cmd.innerHTML = text;
-        this.screen.appendChild(cmd);
-      },
-      async response(text) {
-        const resp = document.createElement('div');
-        resp.className = 'terminal_emulator__response';
-        resp.innerHTML = text;
-        this.screen.appendChild(resp);
-      },
-      async wait(ms) {
-        return new Promise(r => setTimeout(r, ms));
-      },
-      async runLoadingSequence() {
-        const savedChoice = localStorage.getItem('userSystemChoice');
+  const Terminal = {
+    screen: document.getElementById('screen'),
 
-        if (isMobile || savedChoice === 'n') {
-          document.getElementById('banner-avatar').style.display = 'block';
-          document.getElementById('banner-spline').style.display = 'none';
-          this.finish();
-          return;
-        } else if (savedChoice === 'y') {
-          document.getElementById('banner-spline').style.display = 'block';
-          document.getElementById('banner-avatar').style.display = 'none';
+    async command(text){
+      const cmd = document.createElement('div');
+      cmd.className='terminal_emulator__command';
+      cmd.innerHTML=text;
+      this.screen.appendChild(cmd);
+    },
 
-          // initialize spline فقط وقتی لازم هست
-          const canvas = document.querySelector('#banner-spline canvas');
-          if(canvas){
-            import('@splinetool/runtime').then(({Application})=>{
-              const app = new Application(canvas);
-              app.load('scene.splinecode');
-            });
-          }
-          this.finish();
-          return;
+    async response(text){
+      const resp = document.createElement('div');
+      resp.className='terminal_emulator__response';
+      resp.innerHTML=text;
+      this.screen.appendChild(resp);
+    },
+
+    async wait(ms){ return new Promise(r=>setTimeout(r, ms)); },
+
+    async runLoadingSequence(){
+      const savedChoice = localStorage.getItem('userSystemChoice');
+
+      if(isMobile || savedChoice==='n'){
+        document.getElementById('banner-avatar').style.display='block';
+        document.getElementById('banner-spline').style.display='none';
+        this.finish();
+        return;
+      } else if(savedChoice==='y'){
+        document.getElementById('banner-spline').style.display='block';
+        document.getElementById('banner-avatar').style.display='none';
+
+        const canvas = document.querySelector('#banner-spline canvas');
+        if(canvas){
+          import('@splinetool/runtime').then(({Application})=>{
+            const app = new Application(canvas);
+            app.load('scene.splinecode');
+          });
         }
-
-        // اگر ذخیره نشده بود، همان لودینگ و پرسش
-        await this.command('Loading system...');
-        await this.wait(600);
-        await this.response('Initializing components...');
-        await this.wait(600);
-        await this.response('Checking dependencies...');
-        await this.wait(600);
-        await this.response('Preparing environment...');
-        await this.wait(500);
-        await this.response('Finalizing setup...');
-        await this.wait(500);
-        await this.response('Ready!');
-        await this.wait(400);
-
-        if (isMobile) {
-          document.getElementById('banner-avatar').style.display = 'block';
-          this.finish();
-          return;
-        }
-
-        await this.askUser('Do you have a strong system? (yes/no) and then press enter');
-      },
-      async askUser(question) {
-        await this.command(question);
-
-        const field = document.createElement('div');
-        field.className = 'terminal_emulator__field';
-        field.innerHTML = 'Type here: ';
-        field.style.setProperty('--chars', '10ch');
-        this.screen.appendChild(field);
-
-        let input = '';
-        const handleKey = (e) => {
-          if(e.key.length === 1 && !e.ctrlKey){
-            input += e.key;
-            field.innerHTML = 'Type here: ' + input;
-            field.style.setProperty('--chars', 10 + input.length + 'ch');
-          } else if(e.key === 'Backspace'){
-            input = input.slice(0,-1);
-            field.innerHTML = 'Type here: ' + input;
-            field.style.setProperty('--chars', 10 + input.length + 'ch');
-          } else if(e.key === 'Enter'){
-            document.removeEventListener('keydown', handleKey);
-            field.classList.remove('terminal_emulator__field');
-            field.classList.add('terminal_emulator__command');
-
-            const ans = input.trim().toLowerCase();
-            if(ans==='y'||ans==='yes'){
-              this.response('Mode: spline (3D enabled)');
-              localStorage.setItem('userSystemChoice','y');
-
-              document.getElementById('banner-spline').style.display = 'block';
-              document.getElementById('banner-avatar').style.display = 'none';
-
-              const canvas = document.querySelector('#banner-spline canvas');
-              if(canvas){
-                import('@splinetool/runtime').then(({Application})=>{
-                  const app = new Application(canvas);
-                  app.load('scene.splinecode');
-                });
-              }
-            } else {
-              this.response('Mode: avatar (light mode)');
-              localStorage.setItem('userSystemChoice','n');
-
-              document.getElementById('banner-avatar').style.display = 'block';
-              document.getElementById('banner-spline').style.display = 'none';
-            }
-
-            this.response('We ask this to optimize performance for your device.');
-            this.finish();
-          }
-        };
-        document.addEventListener('keydown', handleKey);
-      },
-      finish() {
-        const loader = document.getElementById('terminal-loader');
-        const welcome = document.getElementById('welcome-screen');
-        setTimeout(()=>{
-          welcome.classList.add('visible');
-          setTimeout(()=>{
-            loader.style.opacity=0;
-            setTimeout(()=>{
-              loader.remove();
-              document.body.style.overflow='auto';
-            },1000);
-          },1500);
-        },1000);
+        this.finish();
+        return;
       }
-    }
 
-    const loader=document.getElementById('terminal-loader');
-    loader.style.display='flex';
-    Terminal.runLoadingSequence();
-  });
-  </script> <div id="banner-spline" style="display:none;"> <script type="module" src="/SplineWithFade.astro_astro_type_script_index_0_lang.js"></script> <div class="spline-wrapper" data-astro-cid-fh5e5akq> <!-- افکت fade بالا --> <div class="fade-top" data-astro-cid-fh5e5akq></div> <!-- اسپلاین با عرض کامل --> <canvas class="fullwidth-spline" id="canvas" data-astro-cid-fh5e5akq></canvas> <!-- افکت fade پایین --> <div class="fade-bottom" data-astro-cid-fh5e5akq></div> </div>  </div> <div id="banner-avatar" style="display:none;"> <div class="my-6 md:mx-2"> <div class="flex flex-col sm:flex-row items-center justify-around sm:gap-5 max-w-full mb-6">  <div> <div class="m-4 max-w-full prose">   <p>My name is Ali Lotfi, a curious mind with a passion for learning and creating. I’ve always believed that creativity has no boundaries, whether it’s in art, design, or technology. Outside of my work, I enjoy exploring new ideas, solving challenges, and sharing what I learn with others. This blog is my personal space to express my thoughts, experiences, and the little stories that make life interesting.</p>   </div> </div> </div>  </div> </div> <h1 class="text-accent text-2xl pb-2.5 pl-1 mt-4 md:mt-7 font-semibold">Tags</h1><div class="border-1 border-accent/30 rounded-xl h-1 w-full mb-2"></div> <ul class="flex flex-wrap gap-x-3 gap-y-4 my-5"> <li> <a href="/tags/health" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> health <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/stress" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> stress <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/wellbeing" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> wellbeing <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/AliXD" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> AliXD <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/blog" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> blog <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/features" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> features <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li> </ul>  <h1 class="text-accent text-2xl pb-2.5 pl-1 mt-4 md:mt-7 font-semibold">Latest Posts</h1><div class="border-1 border-accent/30 rounded-xl h-1 w-full mb-2"></div> <article class="w-full py-5 my-1 md:my-4 border-accent/10"> <h1 class="mb-3 text-2xl text-[var(--theme-h1)] font-semibold"> <a href="/posts/stress-is-your-freind"># Stress is your freind.</a> </h1> <div class="my-3 text-foreground/80"> <time>2025-08-14</time>  <span class="before:content-['::'] before:inline-block before:mx-0.5"> 2 min read </span> </div> <p class="my-4 text-base/7 text-foreground">Today I wanna talk about stress, something every person has experienced at least once. First things first, stress is often seen as harmful — at least that’s what we used to think.</p> <div class="mb-6"> <div class="flex flex-wrap gap-3 text-sm">  <a href="/tags/health" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> health </a><a href="/tags/stress" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> stress </a><a href="/tags/wellbeing" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> wellbeing </a> </div> </div> <div> <a class="button flex items-center" href="/posts/stress-is-your-freind">
+      // اگر ذخیره نشده بود، همان لودینگ و پرسش
+      await this.command('Loading system...');
+      await this.wait(600);
+      await this.response('Initializing components...');
+      await this.wait(600);
+      await this.response('Checking dependencies...');
+      await this.wait(600);
+      await this.response('Preparing environment...');
+      await this.wait(500);
+      await this.response('Finalizing setup...');
+      await this.wait(500);
+      await this.response('Ready!');
+      await this.wait(400);
+
+      if(isMobile){
+        document.getElementById('banner-avatar').style.display='block';
+        this.finish();
+        return;
+      }
+
+      await this.askUser('Do you have a strong system? (yes/no) and then press enter');
+    },
+
+    async askUser(question){
+      await this.command(question);
+
+      const field=document.createElement('div');
+      field.className='terminal_emulator__field';
+      field.innerHTML='Type here: ';
+      field.style.setProperty('--chars','10ch');
+      this.screen.appendChild(field);
+
+      let input='';
+      const handleKey=(e)=>{
+        if(e.key.length===1 && !e.ctrlKey){
+          input+=e.key;
+          field.innerHTML='Type here: '+input;
+          field.style.setProperty('--chars', 10+input.length+'ch');
+        } else if(e.key==='Backspace'){
+          input=input.slice(0,-1);
+          field.innerHTML='Type here: '+input;
+          field.style.setProperty('--chars', 10+input.length+'ch');
+        } else if(e.key==='Enter'){
+          document.removeEventListener('keydown',handleKey);
+          field.classList.remove('terminal_emulator__field');
+          field.classList.add('terminal_emulator__command');
+
+          const ans=input.trim().toLowerCase();
+          if(ans==='y'||ans==='yes'){
+            this.response('Mode: spline (3D enabled)');
+            localStorage.setItem('userSystemChoice','y');
+
+            document.getElementById('banner-spline').style.display='block';
+            document.getElementById('banner-avatar').style.display='none';
+
+            const canvas=document.querySelector('#banner-spline canvas');
+            if(canvas){
+              import('@splinetool/runtime').then(({Application})=>{
+                const app=new Application(canvas);
+                app.load('scene.splinecode');
+              });
+            }
+          } else {
+            this.response('Mode: avatar (light mode)');
+            localStorage.setItem('userSystemChoice','n');
+
+            document.getElementById('banner-avatar').style.display='block';
+            document.getElementById('banner-spline').style.display='none';
+          }
+
+          this.response('We ask this to optimize performance for your device.');
+          this.finish();
+        }
+      };
+      document.addEventListener('keydown',handleKey);
+    },
+
+    finish(){
+      const loader=document.getElementById('terminal-loader');
+      const welcome=document.getElementById('welcome-screen');
+
+      setTimeout(()=>{
+        welcome.classList.add('visible');
+        setTimeout(()=>{
+          loader.style.opacity=0;
+          setTimeout(()=>{
+            loader.remove();
+            document.body.style.overflow='auto';
+            // نمایش محتوای اصلی
+            document.querySelectorAll('body > *').forEach(el=>{
+              if(el.id!=='terminal-loader' && el.id!=='welcome-screen'){
+                el.style.display='block';
+              }
+            });
+          },1000);
+        },1500);
+      },1000);
+    }
+  }
+
+  Terminal.runLoadingSequence();
+});
+</script> <div id="banner-spline" style="display:none;"> <script type="module" src="/SplineWithFade.astro_astro_type_script_index_0_lang.js"></script> <div class="spline-wrapper" data-astro-cid-fh5e5akq> <!-- افکت fade بالا --> <div class="fade-top" data-astro-cid-fh5e5akq></div> <!-- اسپلاین با عرض کامل --> <canvas class="fullwidth-spline" id="canvas" data-astro-cid-fh5e5akq></canvas> <!-- افکت fade پایین --> <div class="fade-bottom" data-astro-cid-fh5e5akq></div> </div>  </div> <div id="banner-avatar" style="display:none;"> <div class="my-6 md:mx-2"> <div class="flex flex-col sm:flex-row items-center justify-around sm:gap-5 max-w-full mb-6">  <div> <div class="m-4 max-w-full prose">   <p>My name is Ali Lotfi, a curious mind with a passion for learning and creating. I’ve always believed that creativity has no boundaries, whether it’s in art, design, or technology. Outside of my work, I enjoy exploring new ideas, solving challenges, and sharing what I learn with others. This blog is my personal space to express my thoughts, experiences, and the little stories that make life interesting.</p>   </div> </div> </div>  </div> </div> <h1 class="text-accent text-2xl pb-2.5 pl-1 mt-4 md:mt-7 font-semibold">Tags</h1><div class="border-1 border-accent/30 rounded-xl h-1 w-full mb-2"></div> <ul class="flex flex-wrap gap-x-3 gap-y-4 my-5"> <li> <a href="/tags/health" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> health <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/stress" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> stress <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/wellbeing" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> wellbeing <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/AliXD" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> AliXD <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/blog" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> blog <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li><li> <a href="/tags/features" class="flex gap-2.5 py-2 pl-4 pr-3 bg-accent/7 rounded-3xl border-transparent hover:border-accent/20 border-1"> features <span class="rounded-full bg-foreground/7 text-primary px-2 py-1 text-xs font-semibold"> 1 </span> </a> </li> </ul>  <h1 class="text-accent text-2xl pb-2.5 pl-1 mt-4 md:mt-7 font-semibold">Latest Posts</h1><div class="border-1 border-accent/30 rounded-xl h-1 w-full mb-2"></div> <article class="w-full py-5 my-1 md:my-4 border-accent/10"> <h1 class="mb-3 text-2xl text-[var(--theme-h1)] font-semibold"> <a href="/posts/stress-is-your-freind"># Stress is your freind.</a> </h1> <div class="my-3 text-foreground/80"> <time>2025-08-14</time>  <span class="before:content-['::'] before:inline-block before:mx-0.5"> 2 min read </span> </div> <p class="my-4 text-base/7 text-foreground">Today I wanna talk about stress, something every person has experienced at least once. First things first, stress is often seen as harmful — at least that’s what we used to think.</p> <div class="mb-6"> <div class="flex flex-wrap gap-3 text-sm">  <a href="/tags/health" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> health </a><a href="/tags/stress" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> stress </a><a href="/tags/wellbeing" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> wellbeing </a> </div> </div> <div> <a class="button flex items-center" href="/posts/stress-is-your-freind">
 Read
 <svg width="1em" height="1em" viewBox="0 0 24 24" class="size-5 ml-2" data-icon="chevrons-right">   <use href="#ai:local:chevrons-right"></use>  </svg> </a> </div> </article><article class="w-full py-5 my-1 md:my-4 border-accent/10"> <h1 class="mb-3 text-2xl text-[var(--theme-h1)] font-semibold"> <a href="/posts/showing-off-blog-features"># Blog Features Overview</a> </h1> <div class="my-3 text-foreground/80"> <time>2025-07-20</time>  <span class="before:content-['::'] before:inline-block before:mx-0.5"> 1 min read </span> </div> <p class="my-4 text-base/7 text-foreground">I wanted to make a post showing the features available on my blog, so you can see what’s possible when reading or writing here.</p> <div class="mb-6"> <div class="flex flex-wrap gap-3 text-sm">  <a href="/tags/AliXD" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> AliXD </a><a href="/tags/blog" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> blog </a><a href="/tags/features" class="py-1 px-3 bg-accent/1 hover:bg-accent/8 border-1 border-accent/20 text-accent/90 rounded-2xl transition-colors"> features </a> </div> </div> <div> <a class="button flex items-center" href="/posts/showing-off-blog-features">
 Read
