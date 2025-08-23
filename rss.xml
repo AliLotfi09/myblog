@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AliXD</title><description>My name is Ali Lotfi, a curious mind with a passion for learning and creating. I’ve always believed that creativity has no boundaries, whether it’s in art, design, or technology. Outside of my work, I enjoy exploring new ideas, solving challenges, and sharing what I learn with others. This blog is my personal space to express my thoughts, experiences, and the little stories that make life interesting.</description><link>https://blog.imalixd.ir</link><item><title>Stress is your freind.</title><link>https://blog.imalixd.ir/posts/stress-is-your-freind</link><guid isPermaLink="true">https://blog.imalixd.ir/posts/stress-is-your-freind</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I wanna talk about &lt;strong&gt;stress&lt;/strong&gt;, something every person has experienced at least once. First things first, stress is often seen as harmful — at least that’s what we used to think.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AliXD</title><description>My name is Ali Lotfi, a curious mind with a passion for learning and creating. I’ve always believed that creativity has no boundaries, whether it’s in art, design, or technology. Outside of my work, I enjoy exploring new ideas, solving challenges, and sharing what I learn with others. This blog is my personal space to express my thoughts, experiences, and the little stories that make life interesting.</description><link>https://blog.imalixd.ir</link><item><title>Diplomacy: Reality or Just a Joke?</title><link>https://blog.imalixd.ir/posts/diplomacy</link><guid isPermaLink="true">https://blog.imalixd.ir/posts/diplomacy</guid><pubDate>Sat, 23 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&amp;lt;style&amp;gt;
+/* تب‌ها */
+.tabs {
+display: flex;
+gap: 0.5rem;
+margin-bottom: 1rem;
+}
+.tab {
+padding: 0.5rem 1rem;
+cursor: pointer;
+border-bottom: 3px solid transparent;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+.tab.active {
+border-color: #3b82f6;
+color: #3b82f6;
+}&lt;/p&gt;
+&lt;p&gt;/* محتوا */
+.lang { display: none; }
+.lang.active { display: block; }
+#article-fa { direction: rtl; text-align: right; }&lt;/p&gt;
+&lt;p&gt;/* واکنش‌گرا موبایل */
+@media(max-width:768px){
+.tabs { flex-direction: row; overflow-x:auto; }
+.tab { flex: 1 0 auto; text-align:center; }
+}
+&amp;lt;/style&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- تب‌ها --&amp;gt;
+&amp;lt;div class=&quot;tabs&quot;&amp;gt;
+&amp;lt;div class=&quot;tab active&quot; data-lang=&quot;en&quot;&amp;gt;English&amp;lt;/div&amp;gt;
+&amp;lt;div class=&quot;tab&quot; data-lang=&quot;fa&quot;&amp;gt;فارسی&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- متن انگلیسی --&amp;gt;
+&amp;lt;div id=&quot;article-en&quot; class=&quot;lang active&quot;&amp;gt;
+Hello everyone!&lt;br /&gt;
+Today I want to talk about &lt;strong&gt;diplomacy&lt;/strong&gt;. From my perspective, diplomacy in today’s world is nothing more than a &lt;strong&gt;bitter joke&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Why Diplomacy Feels Useless&lt;/h2&gt;
+&lt;p&gt;The world is on the brink of a &lt;strong&gt;massive mess&lt;/strong&gt;, and diplomacy seems powerless.&lt;br /&gt;
+For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Negotiations are happening on one side.&lt;/li&gt;
+&lt;li&gt;Yet at the same time, &lt;strong&gt;Israel attacked Iran&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::warning
+When diplomacy fails to prevent violence, its role becomes questionable.
+:::&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Beyond Iran&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not only about Iran&lt;/strong&gt;. Slowly but surely, these conflicts are spreading across the globe.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Whether we like it or not, diplomacy doesn’t carry the same weight it used to.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We must face the fact that &lt;strong&gt;diplomacy is losing its influence worldwide&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;A Troubling Future&lt;/h2&gt;
+&lt;p&gt;If this trend continues, the world may head toward a &lt;strong&gt;major war&lt;/strong&gt;.&lt;br /&gt;
+Diplomatic talks and agreements will likely remain &lt;strong&gt;words on paper&lt;/strong&gt;, while reality plays out differently.&lt;/p&gt;
+&lt;p&gt;:::note
+History shows us: when dialogue fails, war often takes its place.
+:::&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;✍️ Written by: &lt;strong&gt;Ali Lotfi&lt;/strong&gt;
+&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- متن فارسی --&amp;gt;
+&amp;lt;div id=&quot;article-fa&quot; class=&quot;lang rtl&quot;&amp;gt;
+سلام به همه!&lt;br /&gt;
+امروز می‌خوام درباره‌ی &lt;strong&gt;دیپلماسی&lt;/strong&gt; حرف بزنم. به‌نظر من، دیپلماسی در دنیای امروز بیشتر شبیه یک &lt;strong&gt;شوخی تلخ&lt;/strong&gt; شده.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;چرا دیپلماسی بی‌اثر شده؟&lt;/h2&gt;
+&lt;p&gt;دنیا در آستانه‌ی یک &lt;strong&gt;بحران بزرگ&lt;/strong&gt; قرار گرفته و دیپلماسی عملاً کارایی خودش رو از دست داده.&lt;br /&gt;
+برای مثال:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;یک طرف ماجرا مذاکره در جریانه.&lt;/li&gt;
+&lt;li&gt;اما در همون زمان، &lt;strong&gt;اسرائیل به ایران حمله می‌کنه&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::warning
+وقتی دیپلماسی نتونه جلوی خشونت رو بگیره، نقش و اعتبارش زیر سؤال می‌ره.
+:::&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;فراتر از ایران&lt;/h2&gt;
+&lt;p&gt;این مسئله فقط به ایران محدود نیست. کم‌کم، این درگیری‌ها دارن به سراسر جهان سرایت می‌کنن.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;«چه بخوایم و چه نخوایم، دیپلماسی دیگه مثل گذشته وزن و اهمیت نداره.»&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;واقعیت اینه که &lt;strong&gt;دیپلماسی در جهان امروز ضعیف و بی‌اثر شده&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;آینده‌ای نگران‌کننده&lt;/h2&gt;
+&lt;p&gt;اگر این روند ادامه پیدا کنه، جهان به سمت یک &lt;strong&gt;جنگ بزرگ&lt;/strong&gt; حرکت می‌کنه.&lt;br /&gt;
+توافق‌ها و قراردادها بیشتر روی &lt;strong&gt;کاغذ&lt;/strong&gt; باقی می‌مونن، در حالی که واقعیت چیز دیگه‌ایه.&lt;/p&gt;
+&lt;p&gt;:::note
+تاریخ بهمون نشون داده: هر وقت گفتگو شکست بخوره، جنگ جاشو می‌گیره.
+:::&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;✍️ نوشته: &lt;strong&gt;علی لطفی&lt;/strong&gt;
+&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;script&amp;gt;
+// تب‌ها
+const tabs = document.querySelectorAll(&quot;.tab&quot;);
+tabs.forEach(tab =&amp;gt; {
+tab.addEventListener(&quot;click&quot;, () =&amp;gt; {
+const lang = tab.dataset.lang;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// فعال کردن تب
+tabs.forEach(t =&amp;gt; t.classList.remove(&quot;active&quot;));
+tab.classList.add(&quot;active&quot;);
+
+// نمایش محتوا
+document.querySelectorAll(&quot;.lang&quot;).forEach(c =&amp;gt; c.classList.remove(&quot;active&quot;));
+document.getElementById(`article-${lang}`).classList.add(&quot;active&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;});
+});
+&amp;lt;/script&amp;gt;&lt;/p&gt;
+</content:encoded><author>Ali Lotfi</author></item><item><title>Stress is your freind.</title><link>https://blog.imalixd.ir/posts/stress-is-your-freind</link><guid isPermaLink="true">https://blog.imalixd.ir/posts/stress-is-your-freind</guid><pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Today I wanna talk about &lt;strong&gt;stress&lt;/strong&gt;, something every person has experienced at least once. First things first, stress is often seen as harmful — at least that’s what we used to think.&lt;/p&gt;
 &lt;h2&gt;Stress and Health Studies&lt;/h2&gt;
 &lt;p&gt;Let me start with a study. This research tracked &lt;strong&gt;30,000 adults in the US for eight years&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;They asked people: “How much stress have you experienced in the last year?”&lt;br /&gt;
